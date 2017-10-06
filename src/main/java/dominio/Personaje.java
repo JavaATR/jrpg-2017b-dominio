@@ -1106,4 +1106,31 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 		}
 		this.items = aux;
 	}
+
+	/**
+	 * Devuelve la fuerza inicial del personaje. <br>
+	 * 
+	 * @return Fuerza inicial del personaje. <br>
+	 */
+	public int getFuerzaInicial() {
+		return FUERZAINICIAL;
+	}
+
+	/**
+	 * Devuelve la destreza inicial del personaje. <br>
+	 * 
+	 * @return Destreza inicial del personaje. <br>
+	 */
+	public int getDestrezaInicial() {
+		return DESTREZAINICIAL;
+	}
+
+	/**
+	 * Devuelve la inteligencia inicial del personaje. <br>
+	 * 
+	 * @return Inteligencia inicial del personaje. <br>
+	 */
+	public int getInteligenciaInicial() {
+		return INTELIGENCIANICIAL;
+	}
 }
