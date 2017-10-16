@@ -14,6 +14,10 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	 */
 	private int salud;
 	/**
+	 * Energía del NPC.
+	 */
+	private int energia;
+	/**
 	 * Dificultad aleatoria NPC.
 	 */
 	private static final int DIFICULTADALEATORIA = -1;
@@ -84,6 +88,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 		}
 		this.aumentarFuerza(MODIFICADORBASEF * (dificultad + 1) + (nivel - 1) * MULTIPLICADORF * (dificultad + 1));
 		this.salud = MODIFICADORBASES * (dificultad + 1) + (nivel - 1) * MULTIPLICADORS * (dificultad + 1);
+		this.energia = 100;
 		this.aumentarDefensa(MODIFICADORBASED * (dificultad + 1) + (nivel - 1) * MULTIPLICADORD * (dificultad + 1));
 	}
 
@@ -119,6 +124,15 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	public final int getSalud() {
 		return salud;
 	}
+	
+	/**
+	 * Retorna un entero que representa los puntos de energia del NPC.
+	 * 
+	 * @return Devuelve la cantidad de energia actual del NPC
+	 */
+	public final int getEnergia() {
+		return energia;
+	}
 
 	/**
 	 * Asigna un valor entero que representará la salud del NPC.
@@ -128,6 +142,16 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	 */
 	public final void setSalud(final int salud) {
 		this.salud = salud;
+	}
+	
+	/**
+	 * Asigna un valor entero que representará la energia del NPC.
+	 * 
+	 * @param energia
+	 *            Entero que indica la nueva energia del NPC.
+	 */
+	public final void setEnergia(final int energia) {
+		this.energia = energia;
 	}
 
 	/**
