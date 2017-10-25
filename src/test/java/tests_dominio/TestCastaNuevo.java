@@ -20,7 +20,7 @@ public class TestCastaNuevo {
 	public void testSetDañoCritico() {
 		Personaje p1 = new Humano("Ben Affleck",new Asesino(),2);
 		p1.getCasta().setDañoCritico(8);
-		Assert.assertEquals(8, p1.getCasta().getDañoCritico(),0);
+		Assert.assertEquals(8, p1.getCasta().getDanoCritico(),0);
 	}
 
 }

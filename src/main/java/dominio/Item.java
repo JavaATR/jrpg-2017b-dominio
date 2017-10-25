@@ -8,8 +8,9 @@ import java.io.Serializable;
 import javax.imageio.ImageIO;
 
 /**
- * Clase que representa los Items que posee el personaje.
+ * Clase que administra los items del personaje. <br>
  */
+@SuppressWarnings("serial")
 public class Item implements Serializable {
 	/**
 	 * ID del item. <br>
@@ -26,6 +27,7 @@ public class Item implements Serializable {
 	/**
 	 * Ubicación en el cuerpo del item. <br>
 	 */
+	@SuppressWarnings("unused")
 	private final int wearLocation;
 	/**
 	 * Bonus de salud del item. <br>
@@ -50,33 +52,35 @@ public class Item implements Serializable {
 	/**
 	 * Foto del item. <br>
 	 */
+	@SuppressWarnings("unused")
 	private final String fotoEquipado;
 
 	/**
-	 * Constructor del Item.
+	 * Crea un item. <br>
 	 * 
 	 * @param idItem
-	 *            Entero que representa el id del item.
+	 *            Id del item. <br>
 	 * @param nombre
-	 *            String que representa el nombre del item.
+	 *            Nombre del item. <br>
 	 * @param wearLocation
-	 *            Entero que representa donde se usa el item.
+	 *            Ubicación del item en el personaje. <br>
 	 * @param bonusSalud
-	 *            Entero que representa el bonus de salud del item.
+	 *            Bonus de salud del item. <br>
 	 * @param bonusEnergia
-	 *            Entero que representa el bonus de energia del item.
+	 *            Bonus de energía del item. <br>
 	 * @param bonusFuerza
-	 *            Entero que representa el bonus de fuerza del item.
+	 *            Bonus de fuerza del item. <br>
 	 * @param bonusDestreza
-	 *            Entero que representa el bonus de destreza del item.
+	 *            Bonus de destreza del item. <br>
 	 * @param bonusInteligencia
-	 *            Entero que representa el bonus de inteligencia del item.
+	 *            Bonus de inteligencia del item. <br>
 	 * @param foto
-	 *            String que representa el path de la foto del item.
+	 *            Dirección del archivo de la foto. <br>
 	 * @param fotoEquipado
-	 *            String que representa la foto cuando el item está equipado.
+	 *            Dirección del archivo de la foto cuando el item esta equipado.
+	 *            <br>
 	 * @throws IOException
-	 *             Cuando no se encuentra la foto del item.
+	 *             La dirección de la foto del item es erronea. <br>
 	 */
 	public Item(final int idItem, final String nombre, final int wearLocation, final int bonusSalud,
 			final int bonusEnergia, final int bonusFuerza, final int bonusDestreza, final int bonusInteligencia,
@@ -94,74 +98,74 @@ public class Item implements Serializable {
 	}
 
 	/**
-	 * Método que retorna la foto del item.
+	 * Devuelve la imágen del item. <br>
 	 * 
-	 * @return retorna la foto del item.
+	 * @return Imágen del item. <br>
 	 * @throws IOException
-	 *             Cuando no se encuentra la foto del item.
+	 *             El path de la imagen es errónea. <br>
 	 */
 	public BufferedImage getFoto() throws IOException {
 		return ImageIO.read(new File("recursos//" + foto));
 	}
 
 	/**
-	 * Método que retorna el nombre del item.
+	 * Devuelve el nombre del item. <br>
 	 * 
-	 * @return Retorna el nombre del item.
+	 * @return Nombre del item. <br>
 	 */
 	public String getNombre() {
 		return nombre;
 	}
 
 	/**
-	 * Método que retorna el bonus de salud del item.
+	 * Devuelve el bonus de salud del item. <br>
 	 * 
-	 * @return Retorna bonus de salud.
+	 * @return Bonus de salud. <br>
 	 */
 	public int getBonusSalud() {
 		return bonusSalud;
 	}
 
 	/**
-	 * Método que retorna el bonus de energia del item.
+	 * Devuelve el bonus de energía del item. <br>
 	 * 
-	 * @return Retorna bonus de energia.
+	 * @return Bonus de energía. <br>
 	 */
 	public int getBonusEnergia() {
 		return bonusEnergia;
 	}
 
 	/**
-	 * Método que retorna el bonus de fuerza del item.
+	 * Devuelve el bonus de fuerza del item. <br>
 	 * 
-	 * @return Retorna bonus de fuerza.
+	 * @return Bonus de fuerza. <br>
 	 */
 	public int getBonusFuerza() {
 		return bonusFuerza;
 	}
 
 	/**
-	 * Método que retorna el bonus de destreza del item.
+	 * Devuelve el bonus de destreza del item. <br>
 	 * 
-	 * @return Retorna bonus de destreza.
+	 * @return Bonus de destreza. <br>
 	 */
 	public int getBonusDestreza() {
 		return bonusDestreza;
 	}
 
 	/**
-	 * Método que retorna el bonus de inteligencia del item.
+	 * Devuelve el bonus de inteligencia del item. <br>
 	 * 
-	 * @return Retorna bonus de inteligencia.
+	 * @return Bonus de inteligencia. <br>
 	 */
 	public int getBonusInteligencia() {
 		return bonusInteligencia;
 	}
 
 	/**
-	 * Método que retorna el id del item.
+	 * Devuelve id del item. <br>
 	 * 
-	 * @return Retorna el id del item.
+	 * @return Id del item. <br>
 	 */
 	public int getIdItem() {
 		return idItem;

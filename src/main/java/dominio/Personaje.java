@@ -487,7 +487,7 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	 * @return Retorna el golpe critico que puede realizar el personaje.
 	 */
 	public final int golpe_critico() {
-		return (int) (this.ataque * this.getCasta().getDañoCritico());
+		return (int) (this.ataque * this.getCasta().getDanoCritico());
 	}
 
 	/**
@@ -1071,7 +1071,7 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 		salud = map.get("salud").intValue();
 		energia = map.get("energia").intValue();
 		defensa = map.get("defensa").intValue();
-		casta.setProbabilidadEvitarDaño(map.get("probEvitarDanio").doubleValue());
+		casta.setProbabilidadEvitarDano(map.get("probEvitarDanio").doubleValue());
 	}
 
 	/**

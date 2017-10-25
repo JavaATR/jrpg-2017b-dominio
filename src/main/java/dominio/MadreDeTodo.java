@@ -3,45 +3,46 @@ package dominio;
 import java.util.ArrayList;
 
 /**
- * Clase abstracta. Que tiene como funcion tener los atributos que comparten las
- * clases NPC y Personaje
+ * Clase abstracta que tiene como funcion la administración de los distintos
+ * tipos de personajes. <br>
  */
 public abstract class MadreDeTodo {
 	/**
-	 * Fuerza que recibira el personaje o npc.
+	 * Fuerza del personaje. <br>
 	 */
 	private int fuerza;
 	/**
-	 * Defensa que recibira el personaje o npc.
+	 * Defensa del personaje. <br>
 	 */
 	protected int defensa;
 	/**
-	 * Nivel que recibira el personaje o npc.
+	 * Nivel del personaje. <br>
 	 */
 	private int nivel;
 	/**
-	 * Nombre que recibira el personaje o npc.
+	 * Nombre del personaje. <br>
 	 */
 	private String nombre;
 	/**
-	 * Objeto para obtener valores aleatorios.
+	 * Generador de números random. <br>
 	 */
 	private RandomGenerator random;
-
+	/**
+	 * Inventario del personaje. <br>
+	 */
 	protected ArrayList<Item> items = new ArrayList<Item>();
 
 	/**
-	 * Clase abstracta. Que tiene como funcion tener los atributos que comparten
-	 * las clases NPC y Personaje
+	 * Crea un personaje. <br>
 	 * 
 	 * @param fuerza
-	 *            valor otorgado por el constructor de NPC o Personaje.
+	 *            Fuerza del personaje. <br>
 	 * @param defensa
-	 *            valor otorgado por el constructor de NPC o Personaje.
+	 *            Defensa del personaje. <br>
 	 * @param nivel
-	 *            valor otorgado por el constructor de NPC o Personaje.
+	 *            Nivel del personaje. <br>
 	 * @param nombre
-	 *            valor otorgado por el constructor de NPC o Personaje.
+	 *            Nombre del personaje. <br>
 	 */
 	public MadreDeTodo(final int fuerza, final int defensa, final int nivel, final String nombre) {
 		this.fuerza = fuerza;
@@ -52,135 +53,133 @@ public abstract class MadreDeTodo {
 	}
 
 	/**
-	 * Método que devuelve la fuerza del personaje o NPC.
+	 * Devuelve la fuerza del personaje. <br>
 	 * 
-	 * @return fuerza del personaje o NPC.
+	 * @return Fuerza del personaje. <br>
 	 */
 	public final int getFuerza() {
 		return fuerza;
 	}
 
 	/**
-	 * Método que devuelve la defensa del personaje o NPC.
+	 * Devuelve la defensa del personaje. <br>
 	 * 
-	 * @return defensa del personaje o NPC.
+	 * @return Defensa del personaje. <br>
 	 */
 	public final int getDefensa() {
 		return defensa;
 	}
 
 	/**
-	 * Método que devuelve el nivel del personaje o NPC.
+	 * Devuelve el nivel del personaje. <br>
 	 * 
-	 * @return nivel del personaje o NPC.
+	 * @return Nivel del personaje. <br>
 	 */
 	public final int getNivel() {
 		return nivel;
 	}
 
 	/**
-	 * Método que devuelve el nombre del personaje o NPC.
+	 * Devuelve el nombre del personaje. <br>
 	 * 
-	 * @return nombre del personaje o NPC.
+	 * @return Nombre del personaje. <br>
 	 */
 	public final String getNombre() {
 		return nombre;
 	}
 
 	/**
-	 * Método void que sobreescribe el atributo nombre. Con el valor que se
-	 * ingresa por parámetro.
+	 * Establece el nombre del personaje. <br>
 	 * 
 	 * @param nombre
-	 *            valor a sobreescribir
+	 *            Nombre del personaje. <br>
 	 */
 	public final void setNombre(final String nombre) {
 		this.nombre = nombre;
 	}
 
 	/**
-	 * Método void que aumenta la fuerza del personaje o NPC. Con el valor que
-	 * se ingresa por parámetro.
+	 * Aumenta la fuerza del personaje. <br>
 	 * 
 	 * @param aumento
-	 *            fuerza a aumentar.
+	 *            Bonus de fuerza. <br>
 	 */
 	public final void aumentarFuerza(final int aumento) {
-		fuerza += aumento;
+		this.fuerza += aumento;
 	}
 
 	/**
-	 * Método void que aumenta el nivel del personaje o NPC.
+	 * Sube de nivel al personaje. <br>
 	 */
 	public final void aumentarNivel() {
-		nivel++;
+		this.nivel++;
 	}
 
 	/**
-	 * Getter del Randomizador.
+	 * Devuelve el random del personaje. <br>
 	 * 
-	 * @return Retorna el randomizador.
+	 * @return Generador de números random. <br>
 	 */
 	public final RandomGenerator getRandom() {
-		return random;
+		return this.random;
 	}
 
 	/**
-	 * Setter del Randomizador.
+	 * Establece el random del personaje. <br>
 	 * 
 	 * @param random
-	 *            Randomizador que reemplazará al actual.
+	 *            Generador de números random. <br>
 	 */
 	public final void setRandom(final RandomGenerator random) {
 		this.random = random;
 	}
 
 	/**
-	 * Aumenta la defensa del personaje / npc.
+	 * Aumenta la defensa del personaje. <br>
 	 * 
 	 * @param bonus
-	 *            valor que se le agrega a la defensa.
+	 *            Bonus de defensa. <br>
 	 */
 	public final void aumentarDefensa(final int bonus) {
-		defensa += bonus;
+		this.defensa += bonus;
 	}
 
 	/**
-	 * Reduce la defensa del personaje.
+	 * Reduce la defensa del personaje. <br>
 	 * 
 	 * @param reduc
-	 *            Valor que se reduce la defensa.
+	 *            Penalización de defensa. <br>
 	 */
 	public final void reducirDefensa(final int reduc) {
-		defensa -= reduc;
+		this.defensa -= reduc;
 	}
 
 	/**
-	 * Metodo para anadir items sin violar el encapsulamiento.
+	 * Añade un item al inventario del personaje. <br>
 	 * 
-	 * @param i
-	 *            Item a agregar.
+	 * @param item
+	 *            Item a agregar. <br>
 	 */
-	public final void anadirItem(final Item i) {
-		items.add(i);
+	public final void anadirItem(final Item item) {
+		this.items.add(item);
 	}
 
 	/**
-	 * Metodo para remover items sin violar el encapsulamiento.
+	 * Remueve un item del inventario del personaje. <br>
 	 * 
-	 * @param i
-	 *            Item a eliminar.
+	 * @param item
+	 *            Item a eliminar. <br>
 	 */
-	public final void removerItem(final Item i) {
-		items.remove(i);
+	public final void removerItem(final Item item) {
+		this.items.remove(item);
 	}
 
 	/**
-	 * Método para obtener la lista de items.
+	 * Devuelve el inventario del personaje. <br>
 	 * 
-	 * @return Lista de items del personaje.
+	 * @return Inventario del personaje. <br>
 	 */
 	public ArrayList<Item> getItems() {
-		return items;
+		return this.items;
 	}
 }

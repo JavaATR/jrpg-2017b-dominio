@@ -1,81 +1,80 @@
 package dominio;
 
 /**
- * Interface implementada en las clases Personaje y NPC. Dependiendo qué clase
- * las esté implementando será como responderán
+ * Interfaz dedicada a la pelea entre personajes. <br>
  */
 public interface Peleable {
 	/**
-	 * Metodo implementado en Personaje y en NonPlayableCharacter.
+	 * El personaje recibe un ataque. <br>
 	 *
 	 * @param daño
-	 *            Valor el cual se descontará de la defensa.
-	 * @return Retorna un entero con el daño causado al llamador.
+	 *            Daño bruto recibido. <br>
+	 * @return Daño neto recibido. <br>
 	 */
 	int serAtacado(int daño);
 
 	/**
-	 * Metodo implementado en Personaje y NonPlayableCharacter.
+	 * Devuelve la salud del personaje. <br>
 	 *
-	 * @return Retornara un entero con la salud del llamador.
+	 * @return Salud del personaje. <br>
 	 */
 	int getSalud();
 
 	/**
-	 * Metodo implementado en Personaje y NonPlayableCharacter.
+	 * Devuelve los puntos de magia del personaje. <br>
 	 *
-	 * @return Retornara un entero con la energia del llamador.
+	 * @return Puntos de magia del personaje. <br>
 	 */
 	int getMagia();
 
 	/**
-	 * Metodo void implementado en Personaje y NonPlayableCharacter.
+	 * Realiza una acción post-turno. <br>
 	 */
 	void despuesDeTurno();
 
 	/**
-	 * Metodo implementado en Personaje y NonPlayableCharacter.
+	 * Ataca a otro personaje. <br>
 	 * 
 	 * @param atacado
-	 *            Personaje al cual el llamador atacara.
-	 * @return Retorna el daño causado del atacante al atacado.
+	 *            Personaje atacado. <br>
+	 * @return Daño que realiza al personaje. <br>
 	 */
 	int atacar(Peleable atacado);
 
 	/**
-	 * Metodo implementado en Personaje y NonPlayableCharacter.
+	 * Otorga experiencia al personaje. <br>
 	 * 
-	 * @return Retorna el nivel del llamador multiplicado por la constante
-	 *         MULTIPLICADOREXP.
+	 * @return Experiencia recibida. <br>
 	 */
 	int otorgarExp();
 
 	/**
-	 * Metodo implementado en Personaje y NonPlayableCharacter.
+	 * Devuelve los puntos de ataque del personaje. <br>
 	 * 
-	 * @return Retorna un entero con el ataque del llamador.
+	 * @return Puntos de ataque del personaje. <br>
 	 */
 	int getAtaque();
 
 	/**
-	 * Metodo implementado en Personaje y NonPlayableCharacter.
+	 * Establece los puntos de ataque de un personaje. <br>
 	 * 
 	 * @param ataque
-	 *            Entero que será el nuevo ataque del llamador.
+	 *            Puntos de ataque. <br>
 	 */
 	void setAtaque(int ataque);
 
 	/**
-	 * Metodo implementado en Personaje y NonPlayableCharacter.
+	 * Indica si el personaje se encuentra vivo. <br>
 	 *
-	 * @return Retorna un boolean si esta vivo o no el llamador.
+	 * @return <b>true</b> si se encuentra vivo. <br>
+	 *         <b>false</b> si se encuentra muerto. <br>
 	 */
 	boolean estaVivo();
 
 	/**
-	 * Método.
+	 * Devuelve el nombre del personaje. <br>
 	 * 
-	 * @return retorna el nombre del Personaje o NPC.
+	 * @return Nombre del personaje. <br>
 	 */
 	String getNombre();
 }

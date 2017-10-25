@@ -3,13 +3,13 @@ package dominio;
 import java.util.Random;
 
 /**
- * Clase que se utiliza para obtener números aleatoreos.
+ * Clase que genera números aleatoreos. <br>
  */
 public class MyRandom extends RandomGenerator {
 	/**
-	 * El método nextDobule() retorna siempre el número 0.49.
+	 * Genera un número double al azar. <br>
 	 * 
-	 * @return retorna un número double que varía entre 0.0 y 1.0
+	 * @return Número double random. <br>
 	 */
 	@Override
 	public final double nextDouble() {
@@ -17,11 +17,11 @@ public class MyRandom extends RandomGenerator {
 	}
 
 	/**
-	 * El método nextInt() decrementa en 1 el argumento que se le pasó.
+	 * Genera un número entero al azar según el límite indicado. <br>
 	 * 
 	 * @param val
-	 *            número entero
-	 * @return Retorna un número menor al parámetro
+	 *            Valor límite. <br>
+	 * @return Número entero random. <br>
 	 */
 	@Override
 	public final int nextInt(final int val) {

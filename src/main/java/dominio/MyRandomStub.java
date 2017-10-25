@@ -14,12 +14,12 @@ public class MyRandomStub extends RandomGenerator {
 	private final int valInt;
 
 	/**
-	 * Constructor del MyRandomStub.
+	 * Constructor del MyRandomStub. <br>
 	 * 
 	 * @param valDouble
-	 *            Double que se fijará en el objeto.
+	 *            Valor random double del stub. <br>
 	 * @param valInt
-	 *            Entero que se fijará en el objeto.
+	 *            Valor random int del stub. <br>
 	 */
 	public MyRandomStub(final double valDouble, final int valInt) {
 		this.valDouble = valDouble;
@@ -27,24 +27,24 @@ public class MyRandomStub extends RandomGenerator {
 	}
 
 	/**
-	 * Método que retorna el valor entero que se pasa en el constructor.
+	 * Devuelve un valor entero random del stub. <br>
 	 * 
 	 * @param val
-	 *            valor que se pasa por parametro.
-	 * @return Entero que se pasa por parametro en el constructor.
+	 *            Rango del random. <br>
+	 * @return Número entero random del stub. <br>
 	 */
 	@Override
 	public final int nextInt(final int val) {
-		return valInt;
+		return this.valInt;
 	}
 
 	/**
-	 * Método que retorna el valor entero que se pasa en el constructor.
+	 * Devuelve un valor double random del stub. <br>
 	 * 
-	 * @return Double que se pasa por parametro en el constructor.
+	 * @return Número double random del stub. <br>
 	 */
 	@Override
 	public final double nextDouble() {
-		return valDouble;
+		return this.valDouble;
 	}
 }

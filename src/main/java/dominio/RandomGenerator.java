@@ -1,33 +1,31 @@
 package dominio;
 
 /**
- * Clase que se utiliza para generar números randoms
+ * Clase que genera números random. <br>
  */
 public class RandomGenerator {
 	/**
-	 * Método que siempre retorna 0. Será sobreescrito por las clases que
-	 * heredan.
+	 * Método que retorna el siguiente valor entero. <br>
 	 * 
 	 * @param val
-	 *            No se usa
-	 * @return Retorna 0
+	 *            Valor. <br>
+	 * @return 0
 	 */
 	public int nextInt(final int val) {
 		return 0;
 	}
 
 	/**
-	 * Método que siempre retorna 0. Será sobreescrito por las clases que
-	 * heredan.
+	 * Método que retorna el siguiente valor double. <br>
 	 * 
-	 * @return Retorna 0
+	 * @return 0
 	 */
 	public double nextDouble() {
 		return 0;
 	}
 
 	/**
-	 * Constructor de la clase.
+	 * Constructor de la clase. <br>
 	 */
 	public RandomGenerator() {
 

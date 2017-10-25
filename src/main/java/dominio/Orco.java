@@ -1,64 +1,60 @@
 package dominio;
 
 /**
- * La clase Orco hereda de la clase Personaje. Completa ciertos atributos que
- * estaban declarados en la clase Personaje, como por ejemplo habilidadesRaza[]
+ * Clase que administra al personaje del orco. <br>
  */
+@SuppressWarnings("serial")
 public class Orco extends Personaje {
 	/**
-	 * Energia minima que se necesita para realizar una habilidad.
+	 * Energia minima que se necesita para realizar una habilidad. <br>
 	 */
 	private static final int ENERGIAMINIMA = 10;
 	/**
-	 * Bonus salud por ser de raza Orco.
+	 * Bonus de salud. <br>
 	 */
 	private static final int BONUSSALUD = 10;
 	/**
-	 * Numero por el cual se multiplicara la defensa.
+	 * Multiplicador de defensa. <br>
 	 */
 	private static final int MULTIPLICADORDEFENSA = 2;
 
 	/**
-	 * La clase Orco hereda de la clase Personaje. Completa ciertos atributos
-	 * que estaban declarados en la clase Personaje, como por ejemplo
-	 * habilidadesRaza[]
+	 * Crea un orco. <br>
 	 * 
 	 * @param nombre
-	 *            Indica el nombre el personaje
+	 *            Nombre del personaje. <br>
 	 * @param casta
-	 *            Indica la casta(Raza) del personaje
+	 *            Casta del personaje. <br>
 	 * @param id
-	 *            Identificador del personaje
+	 *            Id del personaje. <br>
 	 */
 	public Orco(final String nombre, final Casta casta, final int id) {
 		super(nombre, casta, id);
 	}
 
 	/**
-	 * La clase Orco hereda de la clase Personaje. Completa ciertos atributos
-	 * que estaban declarados en la clase Personaje, como por ejemplo
-	 * habilidadesRaza[] Recibe la mayoría de los atributos
+	 * Crea un orco. <br>
 	 * 
 	 * @param nombre
-	 *            Nombre del personaje
+	 *            Nombre del personaje. <br>
 	 * @param salud
-	 *            Salud del personaje
+	 *            Salud del personaje. <br>
 	 * @param energia
-	 *            Energia del personaje
+	 *            Energia del personaje. <br>
 	 * @param fuerza
-	 *            Fuerza del Personaje
+	 *            Fuerza del Personaje. <br>
 	 * @param destreza
-	 *            Destreza del personaje
+	 *            Destreza del personaje. <br>
 	 * @param inteligencia
-	 *            Inteligencia del personaje
+	 *            Inteligencia del personaje. <br>
 	 * @param casta
-	 *            Casta(Raza) del personaje
+	 *            Casta del personaje. <br>
 	 * @param experiencia
-	 *            Experiencia del personaje
+	 *            Experiencia del personaje. <br>
 	 * @param nivel
-	 *            Nivel del personaje
+	 *            Nivel del personaje. <br>
 	 * @param idPersonaje
-	 *            Id del personaje
+	 *            Id del personaje. <br>
 	 */
 	public Orco(final String nombre, final int salud, final int energia, final int fuerza, final int destreza,
 			final int inteligencia, final Casta casta, final int experiencia, final int nivel, final int idPersonaje) {
@@ -66,23 +62,24 @@ public class Orco extends Personaje {
 	}
 
 	/**
-	 * Retorna un booleano dependiendo de si se realizó exitosamente o no el
-	 * ataque. La primera condición para que el ataque pueda realizarse es que
-	 * el atacante(caster) posea 10 o más del atributo energia ya que estos se
-	 * descuentan seguido de comprobar que los posee, de lo contrario el ataque
-	 * no será posible y se retornará false El método serAtacado() tiene como
-	 * argumento el doble del valor del atributo defensa del llamador
+	 * Realiza la habilidad de raza del orco, el golpe defensa.
+	 * <p>
+	 * El ataque consiste en un ataque que utiliza los puntos de defensa del
+	 * orco para atacar. <br>
+	 * <p>
+	 * Se debe tener el mínimo de energía necesario para poder realizar el
+	 * ataque. <br>
 	 * 
 	 * @param atacado
-	 *            Instancia de Personaje o de NPC, dependiendo de cual sea, será
-	 *            como responda el método serAtacado()
-	 * @return Retorna si el ataque fue exitoso o no.
+	 *            Personaje atacado. <br>
+	 * @return <b>true</b> si fue realizado con éxito.<br>
+	 *         <b>false</b> de lo contrario. <br>
 	 */
 	@Override
 	public final boolean habilidadRaza1(final Peleable atacado) {
-		if (this.getEnergia() >= ENERGIAMINIMA) {
-			this.reducirEnergia(ENERGIAMINIMA);
-			if (atacado.serAtacado(this.getDefensa() * MULTIPLICADORDEFENSA) > 0) {
+		if (super.getEnergia() >= ENERGIAMINIMA) {
+			super.reducirEnergia(ENERGIAMINIMA);
+			if (atacado.serAtacado(super.getDefensa() * MULTIPLICADORDEFENSA) > 0) {
 				return true;
 			}
 		}
@@ -90,23 +87,23 @@ public class Orco extends Personaje {
 	}
 
 	/**
-	 * Retorna un booleano dependiendo de si se realizó exitosamente o no el
-	 * ataque. La primera condición para que el ataque pueda realizarse es que
-	 * el atacante(caster) posea 10 o más del atributo energia ya que estos se
-	 * descuentan seguido de comprobar que los posee, de lo contrario el ataque
-	 * no será posible y se retornará false El método serAtacado() tiene como
-	 * argumento el valor del atributo fuerza del llamador luego el llamador se
-	 * cura con el daño causado al atacado
+	 * Realiza la habilidad de raza del orco, el mordisco de vida.
+	 * <p>
+	 * El orco realiza un ataque que le restaura vida teniendo en cuenta la
+	 * fuerza del contrincante.
+	 * <p>
+	 * Se debe tener el mínimo de energía necesario para poder realizar el
+	 * ataque. <br>
 	 * 
 	 * @param atacado
-	 *            Instancia de Personaje o de NPC, dependiendo de cual sea, será
-	 *            como responda el método serAtacado()
-	 * @return Retorna si el ataque fue exitoso o no.
+	 *            Personaje atacado. <br>
+	 * @return <b>true</b> si fue realizado con éxito.<br>
+	 *         <b>false</b> de lo contrario. <br>
 	 */
 	@Override
 	public final boolean habilidadRaza2(final Peleable atacado) {
-		if (this.getEnergia() >= ENERGIAMINIMA) {
-			this.reducirEnergia(ENERGIAMINIMA);
+		if (super.getEnergia() >= ENERGIAMINIMA) {
+			super.reducirEnergia(ENERGIAMINIMA);
 			int danioCausado = atacado.serAtacado(this.getFuerza());
 			if (danioCausado > 0) {
 				this.serCurado(danioCausado);
@@ -117,10 +114,9 @@ public class Orco extends Personaje {
 	}
 
 	/**
-	 * Retorna un vector de string con los nombres de las habilidades de la
-	 * raza.
+	 * Devuelve las habilidades del orco. <br>
 	 * 
-	 * @return Retorna nombres de las habilidades propias de la raza.
+	 * @return Nombre de las habilidades del orco. <br>
 	 */
 	@Override
 	public final String[] getHabilidadesRaza() {
@@ -128,9 +124,9 @@ public class Orco extends Personaje {
 	}
 
 	/**
-	 * Retorna un entero con el bonificador de salud de la raza.
+	 * Devuelve el bonus de salud del orco. <br>
 	 * 
-	 * @return Retorna la salud extra de la raza.
+	 * @return Bonus de salud. <br>
 	 */
 	@Override
 	public final int getSaludBonus() {
@@ -138,9 +134,9 @@ public class Orco extends Personaje {
 	}
 
 	/**
-	 * Retorna un entero con el bonificador de energia de la raza.
+	 * Devuelve el bonus de energía del orco. <br>
 	 * 
-	 * @return Retorna 0 para esta raza.
+	 * @return Bonus de energía. <br>
 	 */
 	@Override
 	public final int getEnergiaBonus() {
@@ -148,9 +144,9 @@ public class Orco extends Personaje {
 	}
 
 	/**
-	 * Retorna una string con el nombre de la raza.
+	 * Devuelve el nombre de la raza. <br>
 	 * 
-	 * @return Retorna el nombre de la raza.
+	 * @return Nombre de la raza. <br>
 	 */
 	@Override
 	public final String getNombreRaza() {

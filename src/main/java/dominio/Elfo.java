@@ -1,64 +1,60 @@
 package dominio;
 
 /**
- * La clase Elfo hereda de la clase Personaje. Completa ciertos atributos que
- * estaban declarados en la clase Personaje, como por ejemplo habilidadesRaza[]
+ * Clase que administra el personaje del elfo. <br>
  */
+@SuppressWarnings("serial")
 public class Elfo extends Personaje {
 	/**
-	 * Energia minima que se necesita para realizar una habilidad.
+	 * Energia mínima que se necesita para realizar una habilidad. <br>
 	 */
 	private static final int ENERGIAMINIMA = 10;
 	/**
-	 * Numero con el que se multiplica el nivel.
+	 * Multiplicador de nivel. <br>
 	 */
 	private static final int MULTIPLICADORNIVEL = 10;
 	/**
-	 * Bonus de energia por ser de raza Elfo.
+	 * Bonus de energía. <br>
 	 */
 	private static final int BONUSENERGIA = 10;
 
 	/**
-	 * La clase Elfo hereda de la clase Personaje. Completa ciertos atributos
-	 * que estaban declarados en la clase Personaje, como por ejemplo
-	 * habilidadesRaza[]
+	 * Crea un elfo. <br>
 	 * 
 	 * @param nombre
-	 *            Indica el nombre el personaje
+	 *            Nombre del personaje. <br>
 	 * @param casta
-	 *            Indica la casta(Raza) del personaje
+	 *            Casta del personaje. <br>
 	 * @param id
-	 *            Identificador del personaje
+	 *            Id del personaje. <br>
 	 */
 	public Elfo(final String nombre, final Casta casta, final int id) {
 		super(nombre, casta, id);
 	}
 
 	/**
-	 * La clase Elfo hereda de la clase Personaje. Completa ciertos atributos
-	 * que estaban declarados en la clase Personaje, como por ejemplo
-	 * habilidadesRaza[] Recibe la mayoría de los atributos
+	 * Crea un elfo. <br>
 	 * 
 	 * @param nombre
-	 *            Nombre del personaje
+	 *            Nombre del personaje. <br>
 	 * @param salud
-	 *            Salud del personaje
+	 *            Salud del personaje. <br>
 	 * @param energia
-	 *            Energia del personaje
+	 *            Energia del personaje. <br>
 	 * @param fuerza
-	 *            Fuerza del Personaje
+	 *            Fuerza del Personaje. <br>
 	 * @param destreza
-	 *            Destreza del personaje
+	 *            Destreza del personaje. <br>
 	 * @param inteligencia
-	 *            Inteligencia del personaje
+	 *            Inteligencia del personaje. <br>
 	 * @param casta
-	 *            Casta(Raza) del personaje
+	 *            Casta del personaje. <br>
 	 * @param experiencia
-	 *            Experiencia del personaje
+	 *            Experiencia del personaje. <br>
 	 * @param nivel
-	 *            Nivel del personaje
+	 *            Nivel del personaje. <br>
 	 * @param idPersonaje
-	 *            Id del personaje
+	 *            Id del personaje. <br>
 	 */
 	public Elfo(final String nombre, final int salud, final int energia, final int fuerza, final int destreza,
 			final int inteligencia, final Casta casta, final int experiencia, final int nivel, final int idPersonaje) {
@@ -66,24 +62,24 @@ public class Elfo extends Personaje {
 	}
 
 	/**
-	 * Retorna un booleano dependiendo de si se realizó exitosamente o no el
-	 * ataque. La primera condición para que el ataque pueda realizarse es que
-	 * el atacante(caster) posea 10 o más del atributo energia ya que estos se
-	 * descuentan seguido de comprobar que los posee, de lo contrario el ataque
-	 * no será posible y se retornará false El método serAtacado() posee como
-	 * argumento la suma de la fuerza del atacante y el nivel del mismo
-	 * multiplicado por 10
+	 * Realiza la habilidad de raza del elfo, el golpe de nivel.
+	 * <p>
+	 * El ataque consiste en que realiza un ataque con una fuerza de 10 niveles
+	 * adicionales.
+	 * <p>
+	 * Se debe tener el mínimo de energía necesario para poder realizar el
+	 * ataque. <br>
 	 * 
 	 * @param atacado
-	 *            Instancia de Personaje o de NPC, dependiendo de cual sea, será
-	 *            como responda el método serAtacado()
-	 * @return retorna si se ejecutó correctamente la habilidad
+	 *            Personaje atacado. <br>
+	 * @return <b>true</b> si fue realizado con éxito.<br>
+	 *         <b>false</b> de lo contrario. <br>
 	 */
 	@Override
 	public final boolean habilidadRaza1(final Peleable atacado) {
-		if (this.getEnergia() >= ENERGIAMINIMA) {
-			this.reducirEnergia(ENERGIAMINIMA);
-			if (atacado.serAtacado(this.getFuerza() + this.getNivel() * MULTIPLICADORNIVEL) > 0) {
+		if (super.getEnergia() >= ENERGIAMINIMA) {
+			super.reducirEnergia(ENERGIAMINIMA);
+			if (atacado.serAtacado(super.getFuerza() + super.getNivel() * MULTIPLICADORNIVEL) > 0) {
 				return true;
 			}
 		}
@@ -91,24 +87,23 @@ public class Elfo extends Personaje {
 	}
 
 	/**
-	 * Retorna un booleano dependiendo de si se realizó exitosamente o no el
-	 * ataque. La primera condición para que el ataque pueda realizarse es que
-	 * el atacante(caster) posea 10 o más del atributo energia ya que estos se
-	 * descuentan seguido de comprobar que los posee, de lo contrario el ataque
-	 * no será posible y se retornará false El método serAtacado() posee como
-	 * argumento un entero representando 1 o 0, dependiendo si el atributo magia
-	 * del llamador, es mayor a 0
+	 * Realiza la habilidad de raza del elfo, el ataque de bosque.
+	 * <p>
+	 * Si el atacado poseé magia recibe el ataque.
+	 * <p>
+	 * Se debe tener el mínimo de energía necesario para poder realizar el
+	 * ataque. <br>
 	 * 
 	 * @param atacado
-	 *            Instancia de Personaje o de NPC, dependiendo de cual sea, será
-	 *            como responda el método serAtacado()
-	 * @return retorna si se ejecutó correctamente la habilidad
+	 *            Personaje atacado. <br>
+	 * @return <b>true</b> si fue realizado con éxito.<br>
+	 *         <b>false</b> de lo contrario. <br>
 	 */
 	@Override
 	public final boolean habilidadRaza2(final Peleable atacado) {
-		if (this.getEnergia() >= ENERGIAMINIMA) {
-			this.reducirEnergia(ENERGIAMINIMA);
-			if (atacado.serAtacado((this.getMagia())) > 0) {
+		if (super.getEnergia() >= ENERGIAMINIMA) {
+			super.reducirEnergia(ENERGIAMINIMA);
+			if (atacado.serAtacado((super.getMagia())) > 0) {
 				return true;
 			}
 		}
@@ -116,10 +111,9 @@ public class Elfo extends Personaje {
 	}
 
 	/**
-	 * Retorna un vector de string con los nombres de las habilidades de la
-	 * raza.
+	 * Devuelve las habilidades del elfo. <br>
 	 * 
-	 * @return Retorna nombres de las habilidades propias de la raza.
+	 * @return Nombre de las habilidades del elfo. <br>
 	 */
 	@Override
 	public final String[] getHabilidadesRaza() {
@@ -127,9 +121,9 @@ public class Elfo extends Personaje {
 	}
 
 	/**
-	 * Retorna un entero con el bonificador de salud de la raza.
+	 * Devuelve el bonus de salud del elfo. <br>
 	 * 
-	 * @return Retorna 0 para esta raza.
+	 * @return Bonus de salud. <br>
 	 */
 	@Override
 	public final int getSaludBonus() {
@@ -137,9 +131,9 @@ public class Elfo extends Personaje {
 	}
 
 	/**
-	 * Retorna un entero con el bonificador de energia de la raza.
+	 * Devuelve el bonus de energía del elfo. <br>
 	 * 
-	 * @return Retorna la energia extra para esta raza.
+	 * @return Bonus de energía. <br>
 	 */
 	@Override
 	public final int getEnergiaBonus() {
@@ -147,9 +141,9 @@ public class Elfo extends Personaje {
 	}
 
 	/**
-	 * Retorna una string con el nombre de la raza.
+	 * Devuelve el nombre de la raza. <br>
 	 * 
-	 * @return Retorna el nombre de la raza.
+	 * @return Nombre de la raza. <br>
 	 */
 	@Override
 	public final String getNombreRaza() {

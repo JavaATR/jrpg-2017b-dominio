@@ -3,205 +3,201 @@ package dominio;
 import java.io.Serializable;
 
 /**
- * Clase abstracta de la cual heredarán las clases Asesion,Guerrero,Hechicero.
- * Posee dos contructores, el contructor por defecto (no recibe argumentos),
- * pondrá los atributos con sus respectivos valores por defecto.
+ * Clase abstracta de la cual heredarán las distintas castas.
+ * <p>
+ * Por defecto tiene parámetros relacionados a probabilidades de golpe crítico,
+ * de evitar daño y de daño crítico ya asignados. <br>
  */
+@SuppressWarnings("serial")
 public abstract class Casta implements Serializable {
 	/**
-	 * Numero que indica probabilidad. Del personaje de realizar un golpe
-	 * critico.
+	 * Numero que indica probabilidad del personaje de realizar un golpe
+	 * critico. <br>
 	 */
 	private double probabilidadGolpeCritico;
 	/**
-	 * Numero que indica probabilidad. Del personaje de evitar un ataque.
+	 * Numero que indica probabilidad del personaje de evitar un ataque. <br>
 	 */
-	private double probabilidadEvitarDaño;
+	private double probabilidadEvitarDano;
 	/**
-	 * Numero por el cual sera multiplicado el ataque.
+	 * Numero por el cual sera multiplicado el ataque. <br>
 	 */
-	private double dañoCritico;
+	private double danoCritico;
 	/**
-	 * Probabilidad de evitar un golpe critico.
+	 * Probabilidad de evitar un golpe critico. <br>
 	 */
 	private static final double PROBEVITARGOLPC = 0.2;
 	/**
-	 * Probabilidad de evitar recibir dano.
+	 * Probabilidad de evitar recibir daño. <br>
 	 */
 	private static final double PROBEVITARDANIO = 0.2;
 	/**
-	 * Numero por el cual sera multiplicado el ataque por defecto.
+	 * Numero por el cual sera multiplicado el ataque por defecto. <br>
 	 */
 	private static final double DANIOCRITICO = 1.5;
 
 	/**
-	 * Clase abstracta de la cual heredarán las clases
-	 * Asesion,Guerrero,Hechicero. Posee dos contructores, el contructor por
-	 * defecto (no recibe argumentos), pondrá los atributos con sus respectivos
-	 * valores por defecto.
+	 * Constructor de casta que asigna las probabilidades por defecto. <br>
 	 */
 	public Casta() {
 		this.probabilidadGolpeCritico = PROBEVITARGOLPC;
-		this.probabilidadEvitarDaño = PROBEVITARDANIO;
-		this.dañoCritico = DANIOCRITICO;
+		this.probabilidadEvitarDano = PROBEVITARDANIO;
+		this.danoCritico = DANIOCRITICO;
 	}
 
 	/**
-	 * El constructor asignará a cada atributo, el valor correspondiente que
-	 * será el que se reciba por argumento.
+	 * Constructor de casta. <br>
 	 * 
 	 * @param probCrit
-	 *            Probabilidad de que el personaje realice un golpe crítico
+	 *            Probabilidad de que el personaje realice un golpe crítico.
+	 *            <br>
 	 * @param evasion
-	 *            Probabilidad de que el personaje evite un golpe crítico
+	 *            Probabilidad de que el personaje evite un golpe crítico. <br>
 	 * @param danioCrit
-	 *            Valor por el cual será multiplicado el golpe básico
+	 *            Valor por el cual será multiplicado el golpe básico. <br>
 	 */
 	public Casta(final double probCrit, final double evasion, final double danioCrit) {
 		this.probabilidadGolpeCritico = probCrit;
-		this.probabilidadEvitarDaño = evasion;
-		this.dañoCritico = danioCrit;
+		this.probabilidadEvitarDano = evasion;
+		this.danoCritico = danioCrit;
 	}
 
 	/**
-	 * Método abstracto que será implementado en Asesino, Guerrero y Hechicero.
+	 * Método abstracto para obtener la fuerza extra de la casta. <br>
 	 * 
-	 * @param caster
-	 *            Personaje atacante.
-	 * @param atacado
-	 *            Personaje que recibirá el ataque.
-	 * @return Retornará true si el ataque fue realizado exitosamente, false de
-	 *         lo contrario.
-	 */
-	public abstract boolean habilidad1(Personaje caster, Peleable atacado);
-
-	/**
-	 * Método abstracto que será implementado en Asesino, Guerrero y Hechicero.
-	 * 
-	 * @return Retorna la fuerza extra de la casta.
+	 * @return Fuerza extra de la casta. <br>
 	 */
 	public abstract int recibirFuerzaBonus();
 
 	/**
-	 * Método abstracto que será implementado en Asesino, Guerrero y Hechicero.
+	 * Método abstracto para obtener la destreza extra de la casta. <br>
 	 * 
-	 * @return Retorna la destreza extra de la casta.
+	 * @return Destreza extra de la casta. <br>
 	 */
 	public abstract int recibirDestrezaBonus();
 
 	/**
-	 * Método abstracto que será implementado en Asesino, Guerrero y Hechicero.
+	 * Método abstracto para obtener la inteligencia extra de la casta. <br>
 	 * 
-	 * @return Retorna la inteligencia extra de la casta.
+	 * @return Inteligencia extra de la casta. <br>
 	 */
 	public abstract int recibirInteligenciaBonus();
 
 	/**
-	 * Método abstracto que será implementado en Asesino, Guerrero y Hechicero.
+	 * Habilidad 1 empleada por la casta. <br>
 	 * 
 	 * @param caster
-	 *            Personaje atacante.
+	 *            Personaje atacante. <br>
 	 * @param atacado
-	 *            Personaje que recibirá el ataque.
-	 * @return Retornará true si el ataque fue realizado exitosamente, false de
-	 *         lo contrario.
+	 *            Personaje que recibirá el ataque. <br>
+	 * @return <b>true</b> si el ataque fue realizado exitosamente. <br>
+	 *         <b>false</b> de lo contrario. <br>
+	 */
+	public abstract boolean habilidad1(Personaje caster, Peleable atacado);
+
+	/**
+	 * Habilidad 2 empleada por la casta. <br>
+	 * 
+	 * @param caster
+	 *            Personaje atacante. <br>
+	 * @param atacado
+	 *            Personaje que recibirá el ataque. <br>
+	 * @return <b>true</b> si el ataque fue realizado exitosamente.<br>
+	 *         <b>false</b> de lo contrario. <br>
 	 */
 	public abstract boolean habilidad2(Personaje caster, Peleable atacado);
 
 	/**
-	 * Método abstracto que será implementado en Asesino, Guerrero y Hechicero.
+	 * Habilidad 3 empleada por la casta. <br>
 	 * 
 	 * @param caster
-	 *            Personaje atacante.
+	 *            Personaje atacante. <br>
 	 * @param atacado
-	 *            Personaje que recibirá el ataque.
-	 * @return Retornará true si el ataque fue realizado exitosamente, false de
-	 *         lo contrario.
+	 *            Personaje que recibirá el ataque. <br>
+	 * @return <b>true </b>si el ataque fue realizado exitosamente.<br>
+	 *         <b>false </b> de lo contrario. <br>
 	 */
 	public abstract boolean habilidad3(Personaje caster, Peleable atacado);
 
 	/**
-	 * Método abstracto que será implementado en Asesino, Guerrero y Hechicero.
+	 * Devuelve el nombre de la casta. <br>
 	 * 
-	 * @return Retorna el nombre de la casta.
+	 * @return Nombre de la casta. <br>
 	 */
 	public abstract String getNombreCasta();
 
 	/**
-	 * Método abstracto que será implementado en Asesino, Guerrero y Hechicero.
+	 * Devuelve las habilidades de la casta. <br>
 	 * 
-	 * @return Retorna nombres de las habilidades propias de la casta.
+	 * @return Nombres de las habilidades propias de la casta. <br>
 	 */
 	public abstract String[] getHabilidadesCasta();
 
 	/**
-	 * Método abstracto que será implementado en Asesino, Guerrero y Hechicero.
+	 * Devuelve la probabilidad de acertar un golpe crítico de la casta. <br>
 	 * 
-	 * @return Retorna la probabilidad de critico propias de la casta.
+	 * @return Probabilidad de critico propias de la casta. <br>
 	 */
 	public final double getProbabilidadGolpeCritico() {
 		return probabilidadGolpeCritico;
 	}
 
 	/**
-	 * Método void que sobreescribe el atributo probabilidadGolpeCritico. con el
-	 * valor que se ingresa por parámetro.
+	 * Establece el valor del golpe crítico de la casta. <br>
 	 * 
 	 * @param probabilidadGolpeCritico
-	 *            Valor que tendra probabilidadGolpeCritico
+	 *            Probabilidad del golpe crítico. <br>
 	 */
 	public final void setProbabilidadGolpeCritico(final double probabilidadGolpeCritico) {
 		this.probabilidadGolpeCritico = probabilidadGolpeCritico;
 	}
 
 	/**
-	 * Método que devuelve la probabilidadEvitarDaño.
+	 * Devuelve la probabilidad de evitar daño de la casta. <br>
 	 * 
-	 * @return probabilidadEvitarDaño
+	 * @return Probabilidad de evitar daño de la casta. <br>
 	 */
 	public final double getProbabilidadEvitarDaño() {
-		return probabilidadEvitarDaño;
+		return probabilidadEvitarDano;
 	}
 
 	/**
-	 * Método void que sobreescribe el atributo probabilidadEvitarDaño. con el
-	 * valor que se ingresa por parámetro.
+	 * Establece la probabilidad de evitar daño de la casta. <br>
 	 * 
 	 * @param probabilidadEvitarDanio
-	 *            Valor que tendra probabilidadEvitarDaño.
+	 *            Probabilidad de evitar daño. <br>
 	 */
-	public final void setProbabilidadEvitarDaño(final double probabilidadEvitarDanio) {
-		this.probabilidadEvitarDaño = probabilidadEvitarDanio;
+	public final void setProbabilidadEvitarDano(final double probabilidadEvitarDanio) {
+		this.probabilidadEvitarDano = probabilidadEvitarDanio;
 	}
 
 	/**
-	 * Método que devuelve el dañoCritico.
+	 * Método que devuelve el danoCritico.
 	 * 
-	 * @return dañoCritico
+	 * @return danoCritico
 	 */
-	public final double getDañoCritico() {
-		return dañoCritico;
+	public final double getDanoCritico() {
+		return danoCritico;
 	}
 
 	/**
-	 * Método void que sobreescribe el atributo dañoCritico. con el valor que se
+	 * Método void que sobreescribe el atributo danoCritico. con el valor que se
 	 * ingresa por parámetro.
 	 * 
 	 * @param danioCritico
-	 *            Valor que tendra dañoCritico
+	 *            Valor que tendra danoCritico
 	 */
 	public final void setDañoCritico(final double danioCritico) {
-		this.dañoCritico = danioCritico;
+		this.danoCritico = danioCritico;
 	}
 
 	/**
-	 * Método void que aumenta el atributo probabilidadEvitarDaño. con el valor
-	 * que se ingresa por parámetro.
+	 * Aumenta la probabilidad de evitar daño. <br>
 	 * 
 	 * @param bonus
-	 *            bonficador de evitar daño
+	 *            Aumento de probabilidad de evitar daño. <br>
 	 */
-	public final void aumentarEvitarDaño(final double bonus) {
-		this.probabilidadEvitarDaño += bonus;
+	public final void aumentarEvitarDano(final double bonus) {
+		this.probabilidadEvitarDano += bonus;
 	}
 }
