@@ -15,7 +15,6 @@ public class MyRandomStub extends RandomGenerator {
 
 	/**
 	 * Constructor del MyRandomStub. <br>
-	 * 
 	 * @param valDouble
 	 *            Valor random double del stub. <br>
 	 * @param valInt
@@ -28,7 +27,6 @@ public class MyRandomStub extends RandomGenerator {
 
 	/**
 	 * Devuelve un valor entero random del stub. <br>
-	 * 
 	 * @param val
 	 *            Rango del random. <br>
 	 * @return Número entero random del stub. <br>
@@ -40,7 +38,6 @@ public class MyRandomStub extends RandomGenerator {
 
 	/**
 	 * Devuelve un valor double random del stub. <br>
-	 * 
 	 * @return Número double random del stub. <br>
 	 */
 	@Override

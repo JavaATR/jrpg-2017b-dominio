@@ -20,7 +20,6 @@ public class Guerrero extends Casta {
 
 	/**
 	 * Crea un guerrero. <br>
-	 * 
 	 * @param probCrit
 	 *            Probabilidad de realizar un golpe crítico. <br>
 	 * @param evasion
@@ -46,7 +45,6 @@ public class Guerrero extends Casta {
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario para poder realizar el
 	 * ataque. <br>
-	 * 
 	 * @param caster
 	 *            Personaje atacante. <br>
 	 * @param atacado
@@ -72,7 +70,6 @@ public class Guerrero extends Casta {
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario para poder realizar el
 	 * ataque. <br>
-	 * 
 	 * @param caster
 	 *            Personaje atacante. <br>
 	 * @param atacado
@@ -97,7 +94,6 @@ public class Guerrero extends Casta {
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario para poder realizar el
 	 * ataque. <br>
-	 * 
 	 * @param caster
 	 *            Personaje atacante. <br>
 	 * @param atacado
@@ -124,7 +120,6 @@ public class Guerrero extends Casta {
 
 	/**
 	 * Devuelve el bonus de fuerza del guerrero. <br>
-	 * 
 	 * @return Bonus de fuerza. <br>
 	 */
 	@Override
@@ -135,7 +130,6 @@ public class Guerrero extends Casta {
 
 	/**
 	 * Devuelve el bonus de destreza del guerrero. <br>
-	 * 
 	 * @return Bonus de destreza. <br>
 	 */
 	@Override
@@ -145,7 +139,6 @@ public class Guerrero extends Casta {
 
 	/**
 	 * Devuelve el bonus de inteligencia del guerrero. <br>
-	 * 
 	 * @return Bonus de inteligencia. <br>
 	 */
 	@Override
@@ -155,7 +148,6 @@ public class Guerrero extends Casta {
 
 	/**
 	 * Devuelve el nombre de la casta. <br>
-	 * 
 	 * @return Nombre de la casta. <br>
 	 */
 	@Override
@@ -165,7 +157,6 @@ public class Guerrero extends Casta {
 
 	/**
 	 * Devuelve las habilidades del guerrero. <br>
-	 * 
 	 * @return Habilidades del guerrero. <br>
 	 */
 	@Override

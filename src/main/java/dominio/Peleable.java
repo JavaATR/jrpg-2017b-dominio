@@ -6,23 +6,20 @@ package dominio;
 public interface Peleable {
 	/**
 	 * El personaje recibe un ataque. <br>
-	 *
-	 * @param daño
+	 * @param dano
 	 *            Daño bruto recibido. <br>
 	 * @return Daño neto recibido. <br>
 	 */
-	int serAtacado(int daño);
+	int serAtacado(int dano);
 
 	/**
 	 * Devuelve la salud del personaje. <br>
-	 *
 	 * @return Salud del personaje. <br>
 	 */
 	int getSalud();
 
 	/**
 	 * Devuelve los puntos de magia del personaje. <br>
-	 *
 	 * @return Puntos de magia del personaje. <br>
 	 */
 	int getMagia();
@@ -34,7 +31,6 @@ public interface Peleable {
 
 	/**
 	 * Ataca a otro personaje. <br>
-	 * 
 	 * @param atacado
 	 *            Personaje atacado. <br>
 	 * @return Daño que realiza al personaje. <br>
@@ -43,21 +39,18 @@ public interface Peleable {
 
 	/**
 	 * Otorga experiencia al personaje. <br>
-	 * 
 	 * @return Experiencia recibida. <br>
 	 */
 	int otorgarExp();
 
 	/**
 	 * Devuelve los puntos de ataque del personaje. <br>
-	 * 
 	 * @return Puntos de ataque del personaje. <br>
 	 */
 	int getAtaque();
 
 	/**
 	 * Establece los puntos de ataque de un personaje. <br>
-	 * 
 	 * @param ataque
 	 *            Puntos de ataque. <br>
 	 */
@@ -65,15 +58,13 @@ public interface Peleable {
 
 	/**
 	 * Indica si el personaje se encuentra vivo. <br>
-	 *
 	 * @return <b>true</b> si se encuentra vivo. <br>
 	 *         <b>false</b> si se encuentra muerto. <br>
 	 */
 	boolean estaVivo();
 
 	/**
-	 * Devuelve el nombre del personaje. <br>
-	 * 
+	 * Devuelve el nombre del personaje. <br> 
 	 * @return Nombre del personaje. <br>
 	 */
 	String getNombre();

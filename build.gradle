@@ -90,6 +90,6 @@ jacocoTestReport {
         xml.enabled false
         csv.enabled true
         html.enabled true
-        //html.destination "${buildDir}/jacocoHtml"
+        html.destination "${buildDir}/jacocoHtml"
     }
 }

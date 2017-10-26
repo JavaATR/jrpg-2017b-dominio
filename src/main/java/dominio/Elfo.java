@@ -20,7 +20,6 @@ public class Elfo extends Personaje {
 
 	/**
 	 * Crea un elfo. <br>
-	 * 
 	 * @param nombre
 	 *            Nombre del personaje. <br>
 	 * @param casta
@@ -34,7 +33,6 @@ public class Elfo extends Personaje {
 
 	/**
 	 * Crea un elfo. <br>
-	 * 
 	 * @param nombre
 	 *            Nombre del personaje. <br>
 	 * @param salud
@@ -69,7 +67,6 @@ public class Elfo extends Personaje {
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario para poder realizar el
 	 * ataque. <br>
-	 * 
 	 * @param atacado
 	 *            Personaje atacado. <br>
 	 * @return <b>true</b> si fue realizado con éxito.<br>
@@ -93,7 +90,6 @@ public class Elfo extends Personaje {
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario para poder realizar el
 	 * ataque. <br>
-	 * 
 	 * @param atacado
 	 *            Personaje atacado. <br>
 	 * @return <b>true</b> si fue realizado con éxito.<br>
@@ -112,7 +108,6 @@ public class Elfo extends Personaje {
 
 	/**
 	 * Devuelve las habilidades del elfo. <br>
-	 * 
 	 * @return Nombre de las habilidades del elfo. <br>
 	 */
 	@Override
@@ -122,7 +117,6 @@ public class Elfo extends Personaje {
 
 	/**
 	 * Devuelve el bonus de salud del elfo. <br>
-	 * 
 	 * @return Bonus de salud. <br>
 	 */
 	@Override
@@ -132,7 +126,6 @@ public class Elfo extends Personaje {
 
 	/**
 	 * Devuelve el bonus de energía del elfo. <br>
-	 * 
 	 * @return Bonus de energía. <br>
 	 */
 	@Override
@@ -142,7 +135,6 @@ public class Elfo extends Personaje {
 
 	/**
 	 * Devuelve el nombre de la raza. <br>
-	 * 
 	 * @return Nombre de la raza. <br>
 	 */
 	@Override

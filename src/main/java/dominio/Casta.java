@@ -47,7 +47,6 @@ public abstract class Casta implements Serializable {
 
 	/**
 	 * Constructor de casta. <br>
-	 * 
 	 * @param probCrit
 	 *            Probabilidad de que el personaje realice un golpe crítico.
 	 *            <br>
@@ -64,28 +63,24 @@ public abstract class Casta implements Serializable {
 
 	/**
 	 * Método abstracto para obtener la fuerza extra de la casta. <br>
-	 * 
 	 * @return Fuerza extra de la casta. <br>
 	 */
 	public abstract int recibirFuerzaBonus();
 
 	/**
 	 * Método abstracto para obtener la destreza extra de la casta. <br>
-	 * 
 	 * @return Destreza extra de la casta. <br>
 	 */
 	public abstract int recibirDestrezaBonus();
 
 	/**
 	 * Método abstracto para obtener la inteligencia extra de la casta. <br>
-	 * 
 	 * @return Inteligencia extra de la casta. <br>
 	 */
 	public abstract int recibirInteligenciaBonus();
 
 	/**
 	 * Habilidad 1 empleada por la casta. <br>
-	 * 
 	 * @param caster
 	 *            Personaje atacante. <br>
 	 * @param atacado
@@ -97,7 +92,6 @@ public abstract class Casta implements Serializable {
 
 	/**
 	 * Habilidad 2 empleada por la casta. <br>
-	 * 
 	 * @param caster
 	 *            Personaje atacante. <br>
 	 * @param atacado
@@ -109,7 +103,6 @@ public abstract class Casta implements Serializable {
 
 	/**
 	 * Habilidad 3 empleada por la casta. <br>
-	 * 
 	 * @param caster
 	 *            Personaje atacante. <br>
 	 * @param atacado
@@ -121,21 +114,18 @@ public abstract class Casta implements Serializable {
 
 	/**
 	 * Devuelve el nombre de la casta. <br>
-	 * 
 	 * @return Nombre de la casta. <br>
 	 */
 	public abstract String getNombreCasta();
 
 	/**
 	 * Devuelve las habilidades de la casta. <br>
-	 * 
 	 * @return Nombres de las habilidades propias de la casta. <br>
 	 */
 	public abstract String[] getHabilidadesCasta();
 
 	/**
 	 * Devuelve la probabilidad de acertar un golpe crítico de la casta. <br>
-	 * 
 	 * @return Probabilidad de critico propias de la casta. <br>
 	 */
 	public final double getProbabilidadGolpeCritico() {
@@ -144,7 +134,6 @@ public abstract class Casta implements Serializable {
 
 	/**
 	 * Establece el valor del golpe crítico de la casta. <br>
-	 * 
 	 * @param probabilidadGolpeCritico
 	 *            Probabilidad del golpe crítico. <br>
 	 */
@@ -154,16 +143,14 @@ public abstract class Casta implements Serializable {
 
 	/**
 	 * Devuelve la probabilidad de evitar daño de la casta. <br>
-	 * 
 	 * @return Probabilidad de evitar daño de la casta. <br>
 	 */
-	public final double getProbabilidadEvitarDaño() {
+	public final double getProbabilidadEvitarDano() {
 		return probabilidadEvitarDano;
 	}
 
 	/**
 	 * Establece la probabilidad de evitar daño de la casta. <br>
-	 * 
 	 * @param probabilidadEvitarDanio
 	 *            Probabilidad de evitar daño. <br>
 	 */
@@ -173,7 +160,6 @@ public abstract class Casta implements Serializable {
 
 	/**
 	 * Método que devuelve el danoCritico.
-	 * 
 	 * @return danoCritico
 	 */
 	public final double getDanoCritico() {
@@ -183,17 +169,15 @@ public abstract class Casta implements Serializable {
 	/**
 	 * Método void que sobreescribe el atributo danoCritico. con el valor que se
 	 * ingresa por parámetro.
-	 * 
 	 * @param danioCritico
 	 *            Valor que tendra danoCritico
 	 */
-	public final void setDañoCritico(final double danioCritico) {
+	public final void setDanoCritico(final double danioCritico) {
 		this.danoCritico = danioCritico;
 	}
 
 	/**
 	 * Aumenta la probabilidad de evitar daño. <br>
-	 * 
 	 * @param bonus
 	 *            Aumento de probabilidad de evitar daño. <br>
 	 */

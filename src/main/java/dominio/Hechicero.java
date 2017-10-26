@@ -24,7 +24,6 @@ public class Hechicero extends Casta {
 
 	/**
 	 * Crea un hechicero. <br>
-	 * 
 	 * @param probCrit
 	 *            Probabilidad de realizar un golpe crítico. <br>
 	 * @param evasion
@@ -50,7 +49,6 @@ public class Hechicero extends Casta {
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario para poder realizar el
 	 * ataque. <br>
-	 * 
 	 * @param caster
 	 *            Personaje atacante. <br>
 	 * @param atacado
@@ -76,7 +74,6 @@ public class Hechicero extends Casta {
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario para poder realizar el
 	 * ataque. <br>
-	 * 
 	 * @param caster
 	 *            Personaje atacante. <br>
 	 * @param aliado
@@ -103,7 +100,6 @@ public class Hechicero extends Casta {
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario para poder realizar el
 	 * ataque. <br>
-	 * 
 	 * @param caster
 	 *            Personaje atacante. <br>
 	 * @param atacado
@@ -128,7 +124,6 @@ public class Hechicero extends Casta {
 
 	/**
 	 * Devuelve el bonus de inteligencia del hechicero. <br>
-	 * 
 	 * @return Bonus de inteligencia. <br>
 	 */
 	@Override
@@ -138,7 +133,6 @@ public class Hechicero extends Casta {
 
 	/**
 	 * Devuelve el bonus de destreza del hechicero. <br>
-	 * 
 	 * @return Bonus de destreza. <br>
 	 */
 	@Override
@@ -148,7 +142,6 @@ public class Hechicero extends Casta {
 
 	/**
 	 * Devuelve el bonus de fuerza del hechicero. <br>
-	 * 
 	 * @return Bonus de fuerza. <br>
 	 */
 	@Override
@@ -158,7 +151,6 @@ public class Hechicero extends Casta {
 
 	/**
 	 * Devuelve el nombre de la casta. <br>
-	 * 
 	 * @return Nombre de la casta. <br>
 	 */
 	@Override
@@ -168,7 +160,6 @@ public class Hechicero extends Casta {
 
 	/**
 	 * Devuelve las habilidades del hechicero. <br>
-	 * 
 	 * @return Habilidades del hechicero. <br>
 	 */
 	@Override

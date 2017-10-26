@@ -28,7 +28,6 @@ public class Asesino extends Casta {
 
 	/**
 	 * Crea un asesino. <br>
-	 * 
 	 * @param probCrit
 	 *            Probabilidad de realizar un golpe crítico. <br>
 	 * @param evasion
@@ -54,7 +53,6 @@ public class Asesino extends Casta {
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario para poder realizar el
 	 * ataque. <br>
-	 * 
 	 * @param caster
 	 *            Personaje atacante. <br>
 	 * @param atacado
@@ -80,7 +78,6 @@ public class Asesino extends Casta {
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario para poder realizar el
 	 * aumento. <br>
-	 * 
 	 * @param caster
 	 *            Personaje que lanza la habilidad. <br>
 	 * @param atacado
@@ -92,7 +89,7 @@ public class Asesino extends Casta {
 	public final boolean habilidad2(final Personaje caster, final Peleable atacado) {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
-			if (super.getProbabilidadEvitarDaño() + AUMENTARPROBEVITAR < MAXIMAEVASION) {
+			if (super.getProbabilidadEvitarDano() + AUMENTARPROBEVITAR < MAXIMAEVASION) {
 				super.aumentarEvitarDano(AUMENTARPROBEVITAR);
 			} else {
 				super.setProbabilidadEvitarDano(PROBEVITARDANIO);
@@ -104,7 +101,6 @@ public class Asesino extends Casta {
 
 	/**
 	 * Habilidad no implementada. <br>
-	 * 
 	 * @param caster
 	 *            Null. <br>
 	 * @param atacado
@@ -118,7 +114,6 @@ public class Asesino extends Casta {
 
 	/**
 	 * Devuelve el bonus de destreza del asesino. <br>
-	 * 
 	 * @return Bonus de destreza. <br>
 	 */
 	@Override
@@ -128,7 +123,6 @@ public class Asesino extends Casta {
 
 	/**
 	 * Devuelve el bonus de fuerza del asesino. <br>
-	 * 
 	 * @return Bonus de fuerza. <br>
 	 */
 	@Override
@@ -138,7 +132,6 @@ public class Asesino extends Casta {
 
 	/**
 	 * Devuelve el bonus de inteligencia del asesino. <br>
-	 * 
 	 * @return Bonus de inteligencia. <br>
 	 */
 	@Override
@@ -148,7 +141,6 @@ public class Asesino extends Casta {
 
 	/**
 	 * Devuelve el nombre de la casta. <br>
-	 * 
 	 * @return Nombre de la casta. <br>
 	 */
 	@Override
@@ -158,7 +150,6 @@ public class Asesino extends Casta {
 
 	/**
 	 * Devuelve las habilidades del asesino. <br>
-	 * 
 	 * @return Habilidades del asesino. <br>
 	 */
 	@Override

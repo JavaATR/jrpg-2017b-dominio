@@ -70,7 +70,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	 * Constructor de la Clase. Dependiendo de la dificultad que se pasa por
 	 * parámetro al constructor, aumentará o disminuirá el valor de los
 	 * atributos fuerza salud y defensa.
-	 * 
+	 *
 	 * @param nombre
 	 *            Nombre que se le otorga al NPC
 	 * @param nivel
@@ -96,7 +96,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	 * Retorna un entero. Que la cantidad de experiencia que debe sumarse al
 	 * Personaje que produjo la disminución de la salud del NPC a 0. La misma
 	 * sera MULTIPLCADOREXPNPC veces el valor del atributo nivel
-	 * 
+	 *
 	 * @return Cantidad de experiencia a otorgar
 	 */
 	@Override
@@ -107,7 +107,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	/**
 	 * Retorna un booleano. Que indica si el NPC esta vivo, evaluando si el
 	 * mismo tiene salud mayor a 0.
-	 * 
+	 *
 	 * @return true si el NPC está vivo, false para lo contrario.
 	 */
 	@Override
@@ -117,7 +117,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 
 	/**
 	 * Retorna un entero que representa los puntos de salud del NPC.
-	 * 
+	 *
 	 * @return Devuelve la cantidad de vida actual del NPC
 	 */
 	@Override
@@ -127,7 +127,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	
 	/**
 	 * Retorna un entero que representa los puntos de energia del NPC.
-	 * 
+	 *
 	 * @return Devuelve la cantidad de energia actual del NPC
 	 */
 	public final int getEnergia() {
@@ -136,7 +136,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 
 	/**
 	 * Asigna un valor entero que representará la salud del NPC.
-	 * 
+	 *
 	 * @param salud
 	 *            Entero que indica la nueva salud del NPC.
 	 */
@@ -146,7 +146,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	
 	/**
 	 * Asigna un valor entero que representará la energia del NPC.
-	 * 
+	 *
 	 * @param energia
 	 *            Entero que indica la nueva energia del NPC.
 	 */
@@ -157,7 +157,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	/**
 	 * Método que, dependiendo de MyRandom.nextdouble() y NUMEROPARAATACAR.
 	 * Puede ejecutar un ataque mejorado por el atributo MULTIPLICADORFUERZA
-	 * 
+	 *
 	 * @param atacado
 	 *            Peleable que recibe el ataque
 	 * @return Retorna un entero que representa los puntos de daño realizados
@@ -174,7 +174,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	/**
 	 * Dependiendo de MyRandom.nextdouble() y NUMEROPARASERATACADO. Puede
 	 * disminuir el daño dependiendo del atributo DIVISORDEDEFENSA.
-	 * 
+	 *
 	 * @param danio
 	 *            valor a ser descontado del atributo salud.
 	 * @return Retorna 0 si el ataque no fue realizado con exito
@@ -201,7 +201,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 
 	/**
 	 * Método sin implementar.
-	 * 
+	 *
 	 * @param exp
 	 *            Experiencia a aumentar al npc.
 	 */
@@ -211,7 +211,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 
 	/**
 	 * Retorna un entero que representa el atributo de Fuerza del NPC.
-	 * 
+	 *
 	 * @return retorna el ataque del NPC.
 	 */
 	@Override
@@ -221,7 +221,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 
 	/**
 	 * Asigna un valor entero que representará el ataque del NPC.
-	 * 
+	 *
 	 * @param ataque
 	 *            Entero que indica la nueva fuerza del NPC.
 	 */
@@ -232,7 +232,7 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 
 	/**
 	 * Retorna siempre un entero de valor 0.
-	 * 
+	 *
 	 * @return retorna 0 porque NPC no tiene magia.
 	 */
 	@Override

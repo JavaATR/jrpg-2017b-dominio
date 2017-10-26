@@ -20,7 +20,6 @@ public class Orco extends Personaje {
 
 	/**
 	 * Crea un orco. <br>
-	 * 
 	 * @param nombre
 	 *            Nombre del personaje. <br>
 	 * @param casta
@@ -34,7 +33,6 @@ public class Orco extends Personaje {
 
 	/**
 	 * Crea un orco. <br>
-	 * 
 	 * @param nombre
 	 *            Nombre del personaje. <br>
 	 * @param salud
@@ -69,7 +67,6 @@ public class Orco extends Personaje {
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario para poder realizar el
 	 * ataque. <br>
-	 * 
 	 * @param atacado
 	 *            Personaje atacado. <br>
 	 * @return <b>true</b> si fue realizado con éxito.<br>
@@ -94,7 +91,6 @@ public class Orco extends Personaje {
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario para poder realizar el
 	 * ataque. <br>
-	 * 
 	 * @param atacado
 	 *            Personaje atacado. <br>
 	 * @return <b>true</b> si fue realizado con éxito.<br>
@@ -115,7 +111,6 @@ public class Orco extends Personaje {
 
 	/**
 	 * Devuelve las habilidades del orco. <br>
-	 * 
 	 * @return Nombre de las habilidades del orco. <br>
 	 */
 	@Override
@@ -125,7 +120,6 @@ public class Orco extends Personaje {
 
 	/**
 	 * Devuelve el bonus de salud del orco. <br>
-	 * 
 	 * @return Bonus de salud. <br>
 	 */
 	@Override
@@ -135,7 +129,6 @@ public class Orco extends Personaje {
 
 	/**
 	 * Devuelve el bonus de energía del orco. <br>
-	 * 
 	 * @return Bonus de energía. <br>
 	 */
 	@Override
@@ -145,7 +138,6 @@ public class Orco extends Personaje {
 
 	/**
 	 * Devuelve el nombre de la raza. <br>
-	 * 
 	 * @return Nombre de la raza. <br>
 	 */
 	@Override

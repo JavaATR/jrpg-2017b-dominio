@@ -6,7 +6,6 @@ package dominio;
 public class RandomGenerator {
 	/**
 	 * Método que retorna el siguiente valor entero. <br>
-	 * 
 	 * @param val
 	 *            Valor. <br>
 	 * @return 0
@@ -17,7 +16,6 @@ public class RandomGenerator {
 
 	/**
 	 * Método que retorna el siguiente valor double. <br>
-	 * 
 	 * @return 0
 	 */
 	public double nextDouble() {

@@ -57,7 +57,6 @@ public class Item implements Serializable {
 
 	/**
 	 * Crea un item. <br>
-	 * 
 	 * @param idItem
 	 *            Id del item. <br>
 	 * @param nombre
@@ -99,7 +98,6 @@ public class Item implements Serializable {
 
 	/**
 	 * Devuelve la imágen del item. <br>
-	 * 
 	 * @return Imágen del item. <br>
 	 * @throws IOException
 	 *             El path de la imagen es errónea. <br>
@@ -110,7 +108,6 @@ public class Item implements Serializable {
 
 	/**
 	 * Devuelve el nombre del item. <br>
-	 * 
 	 * @return Nombre del item. <br>
 	 */
 	public String getNombre() {
@@ -119,7 +116,6 @@ public class Item implements Serializable {
 
 	/**
 	 * Devuelve el bonus de salud del item. <br>
-	 * 
 	 * @return Bonus de salud. <br>
 	 */
 	public int getBonusSalud() {
@@ -128,7 +124,6 @@ public class Item implements Serializable {
 
 	/**
 	 * Devuelve el bonus de energía del item. <br>
-	 * 
 	 * @return Bonus de energía. <br>
 	 */
 	public int getBonusEnergia() {
@@ -137,7 +132,6 @@ public class Item implements Serializable {
 
 	/**
 	 * Devuelve el bonus de fuerza del item. <br>
-	 * 
 	 * @return Bonus de fuerza. <br>
 	 */
 	public int getBonusFuerza() {
@@ -146,7 +140,6 @@ public class Item implements Serializable {
 
 	/**
 	 * Devuelve el bonus de destreza del item. <br>
-	 * 
 	 * @return Bonus de destreza. <br>
 	 */
 	public int getBonusDestreza() {
@@ -155,7 +148,6 @@ public class Item implements Serializable {
 
 	/**
 	 * Devuelve el bonus de inteligencia del item. <br>
-	 * 
 	 * @return Bonus de inteligencia. <br>
 	 */
 	public int getBonusInteligencia() {
@@ -164,7 +156,6 @@ public class Item implements Serializable {
 
 	/**
 	 * Devuelve id del item. <br>
-	 * 
 	 * @return Id del item. <br>
 	 */
 	public int getIdItem() {

@@ -14,7 +14,7 @@ public abstract class MadreDeTodo {
 	/**
 	 * Defensa del personaje. <br>
 	 */
-	protected int defensa;
+	private int defensa;
 	/**
 	 * Nivel del personaje. <br>
 	 */
@@ -30,11 +30,10 @@ public abstract class MadreDeTodo {
 	/**
 	 * Inventario del personaje. <br>
 	 */
-	protected ArrayList<Item> items = new ArrayList<Item>();
+	private ArrayList<Item> items = new ArrayList<Item>();
 
 	/**
 	 * Crea un personaje. <br>
-	 * 
 	 * @param fuerza
 	 *            Fuerza del personaje. <br>
 	 * @param defensa
@@ -54,7 +53,6 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Devuelve la fuerza del personaje. <br>
-	 * 
 	 * @return Fuerza del personaje. <br>
 	 */
 	public final int getFuerza() {
@@ -63,7 +61,6 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Devuelve la defensa del personaje. <br>
-	 * 
 	 * @return Defensa del personaje. <br>
 	 */
 	public final int getDefensa() {
@@ -72,7 +69,6 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Devuelve el nivel del personaje. <br>
-	 * 
 	 * @return Nivel del personaje. <br>
 	 */
 	public final int getNivel() {
@@ -81,7 +77,6 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Devuelve el nombre del personaje. <br>
-	 * 
 	 * @return Nombre del personaje. <br>
 	 */
 	public final String getNombre() {
@@ -90,7 +85,6 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Establece el nombre del personaje. <br>
-	 * 
 	 * @param nombre
 	 *            Nombre del personaje. <br>
 	 */
@@ -100,7 +94,6 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Aumenta la fuerza del personaje. <br>
-	 * 
 	 * @param aumento
 	 *            Bonus de fuerza. <br>
 	 */
@@ -117,7 +110,6 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Devuelve el random del personaje. <br>
-	 * 
 	 * @return Generador de números random. <br>
 	 */
 	public final RandomGenerator getRandom() {
@@ -126,7 +118,6 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Establece el random del personaje. <br>
-	 * 
 	 * @param random
 	 *            Generador de números random. <br>
 	 */
@@ -136,7 +127,6 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Aumenta la defensa del personaje. <br>
-	 * 
 	 * @param bonus
 	 *            Bonus de defensa. <br>
 	 */
@@ -146,7 +136,6 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Reduce la defensa del personaje. <br>
-	 * 
 	 * @param reduc
 	 *            Penalización de defensa. <br>
 	 */
@@ -156,7 +145,6 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Añade un item al inventario del personaje. <br>
-	 * 
 	 * @param item
 	 *            Item a agregar. <br>
 	 */
@@ -166,7 +154,6 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Remueve un item del inventario del personaje. <br>
-	 * 
 	 * @param item
 	 *            Item a eliminar. <br>
 	 */
@@ -176,10 +163,27 @@ public abstract class MadreDeTodo {
 
 	/**
 	 * Devuelve el inventario del personaje. <br>
-	 * 
 	 * @return Inventario del personaje. <br>
 	 */
 	public ArrayList<Item> getItems() {
 		return this.items;
+	}
+
+	/**
+	 * Establece la defensa. <br>
+	 * @param defensa
+	 *            Puntos de defensa. <br>
+	 */
+	public void setDefensa(final int defensa) {
+		this.defensa = defensa;
+	}
+
+	/**
+	 * Establece un item. <br>
+	 * @param items
+	 *            Items a establecer. <br>
+	 */
+	public void setItem(final ArrayList<Item> items) {
+		this.items = items;
 	}
 }

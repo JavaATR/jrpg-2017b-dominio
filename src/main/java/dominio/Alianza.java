@@ -17,7 +17,6 @@ public class Alianza {
 
 	/**
 	 * Crea una alianza entre personajes. <br>
-	 * 
 	 * @param nombre
 	 *            Nombre que se le dará a la alianza. <br>
 	 */
@@ -28,7 +27,6 @@ public class Alianza {
 
 	/**
 	 * Devuelve la lista de los personajes que conforman la alianza. <br>
-	 * 
 	 * @return Lista de aliados. <br>
 	 */
 	public final LinkedList<Personaje> getAliados() {
@@ -37,7 +35,6 @@ public class Alianza {
 
 	/**
 	 * Devuelve el nombre de la alianza. <br>
-	 * 
 	 * @return Nombre de la alianza. <br>
 	 */
 	public final String obtenerNombre() {
@@ -46,7 +43,6 @@ public class Alianza {
 
 	/**
 	 * Se encarga de eliminar un personaje de la alianza. <br>
-	 * 
 	 * @param personaje
 	 *            Personaje a remover de la alianza. <br>
 	 */
@@ -56,11 +52,10 @@ public class Alianza {
 
 	/**
 	 * Agrega un personaje a la alianza. <br>
-	 * 
 	 * @param personaje
 	 *            Personaje a agregar a la alianza. <br>
 	 */
-	public final void añadirPersonaje(final Personaje personaje) {
+	public final void anadirPersonaje(final Personaje personaje) {
 		aliados.add(personaje);
 	}
 }

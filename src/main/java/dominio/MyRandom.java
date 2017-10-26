@@ -8,7 +8,6 @@ import java.util.Random;
 public class MyRandom extends RandomGenerator {
 	/**
 	 * Genera un número double al azar. <br>
-	 * 
 	 * @return Número double random. <br>
 	 */
 	@Override
@@ -18,7 +17,6 @@ public class MyRandom extends RandomGenerator {
 
 	/**
 	 * Genera un número entero al azar según el límite indicado. <br>
-	 * 
 	 * @param val
 	 *            Valor límite. <br>
 	 * @return Número entero random. <br>
