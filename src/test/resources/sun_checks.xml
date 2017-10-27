@@ -93,18 +93,17 @@
 		<module name="MethodLength" />
 		<module name="ParameterNumber" />
 
-		<!-- Checks for whitespace -->
-		<!-- See http://checkstyle.sf.net/config_whitespace.html -->
-		<module name="EmptyForIteratorPad" />
-		<module name="GenericWhitespace" />
-		<module name="MethodParamPad" />
-		<module name="NoWhitespaceAfter" />
-		<module name="NoWhitespaceBefore" />
-		<module name="OperatorWrap" />
-		<module name="ParenPad" />
-		<module name="TypecastParenPad" />
-		<module name="WhitespaceAfter" />
-		<module name="WhitespaceAround" />
+        <!-- Checks for Size Violations.                    -->
+        <!-- See http://checkstyle.sf.net/config_sizes.html -->
+        <module name="LineLength">
+            <property name="max" value="200"/>
+            <property name="ignorePattern" value="^([\s]+\*)([\s]+)$"/>
+        </module>
+        <module name="MethodLength"/>
+        <module name="ParameterNumber">
+            <property name="max" value="20"/>
+            <property name="tokens" value="METHOD_DEF"/>
+        </module>
 
 		<!-- Modifier Checks -->
 		<!-- See http://checkstyle.sf.net/config_modifiers.html -->
