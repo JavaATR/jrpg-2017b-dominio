@@ -16,7 +16,8 @@ public abstract class Casta implements Serializable {
 	 */
 	private double probabilidadGolpeCritico;
 	/**
-	 * Numero que indica probabilidad del personaje de evitar un ataque. <br>
+	 * Numero que indica probabilidad del personaje
+	 * de evitar un ataque. <br>
 	 */
 	private double probabilidadEvitarDano;
 	/**
@@ -51,11 +52,13 @@ public abstract class Casta implements Serializable {
 	 *            Probabilidad de que el personaje realice un golpe crítico.
 	 *            <br>
 	 * @param evasion
-	 *            Probabilidad de que el personaje evite un golpe crítico. <br>
+	 *            Probabilidad de que el personaje evite un golpe
+	 *            crítico. <br>
 	 * @param danioCrit
 	 *            Valor por el cual será multiplicado el golpe básico. <br>
 	 */
-	public Casta(final double probCrit, final double evasion, final double danioCrit) {
+	public Casta(final double probCrit, final double evasion,
+			final double danioCrit) {
 		this.probabilidadGolpeCritico = probCrit;
 		this.probabilidadEvitarDano = evasion;
 		this.danoCritico = danioCrit;
@@ -125,7 +128,8 @@ public abstract class Casta implements Serializable {
 	public abstract String[] getHabilidadesCasta();
 
 	/**
-	 * Devuelve la probabilidad de acertar un golpe crítico de la casta. <br>
+	 * Devuelve la probabilidad de acertar un golpe crítico
+	 * de la casta. <br>
 	 * @return Probabilidad de critico propias de la casta. <br>
 	 */
 	public final double getProbabilidadGolpeCritico() {
@@ -137,7 +141,8 @@ public abstract class Casta implements Serializable {
 	 * @param probabilidadGolpeCritico
 	 *            Probabilidad del golpe crítico. <br>
 	 */
-	public final void setProbabilidadGolpeCritico(final double probabilidadGolpeCritico) {
+	public final void setProbabilidadGolpeCritico(final double
+			probabilidadGolpeCritico) {
 		this.probabilidadGolpeCritico = probabilidadGolpeCritico;
 	}
 
@@ -154,7 +159,8 @@ public abstract class Casta implements Serializable {
 	 * @param probabilidadEvitarDanio
 	 *            Probabilidad de evitar daño. <br>
 	 */
-	public final void setProbabilidadEvitarDano(final double probabilidadEvitarDanio) {
+	public final void setProbabilidadEvitarDano(final double
+			probabilidadEvitarDanio) {
 		this.probabilidadEvitarDano = probabilidadEvitarDanio;
 	}
 
@@ -167,8 +173,8 @@ public abstract class Casta implements Serializable {
 	}
 
 	/**
-	 * Método void que sobreescribe el atributo danoCritico. con el valor que se
-	 * ingresa por parámetro.
+	 * Método void que sobreescribe el atributo danoCritico
+	 * con el valor que se ingresa por parámetro.
 	 * @param danioCritico
 	 *            Valor que tendra danoCritico
 	 */

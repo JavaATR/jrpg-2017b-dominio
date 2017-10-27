@@ -62,17 +62,22 @@ public class Humano extends Personaje {
 	 * @param idPersonaje
 	 *            Id del personaje. <br>
 	 */
-	public Humano(final String nombre, final int salud, final int energia, final int fuerza, final int destreza,
-			final int inteligencia, final Casta casta, final int experiencia, final int nivel, final int idPersonaje) {
-		super(nombre, salud, energia, fuerza, destreza, inteligencia, casta, experiencia, nivel, idPersonaje);
+	public Humano(final String nombre, final int salud, final int energia,
+			final int fuerza, final int destreza, final int inteligencia,
+			final Casta casta, final int experiencia, final int nivel,
+			final int idPersonaje) {
+		super(nombre, salud, energia, fuerza, destreza, inteligencia,
+				casta, experiencia, nivel, idPersonaje);
 	}
 
 	/**
 	 * Realiza la habilidad de raza del humano, incentivar.
 	 * <p>
-	 * EL personaje aumenta su ataque con respecto a su capacidad de magia. <br>
+	 * EL personaje aumenta su ataque con respecto
+	 * a su capacidad de magia. <br>
 	 * <p>
-	 * Se debe tener el mínimo de energía necesario para poder realizar el
+	 * Se debe tener el mínimo de energía necesario
+	 * para poder realizar el
 	 * ataque. <br>
 	 * @param atacado
 	 *            Personaje buffeado. <br>
@@ -92,10 +97,12 @@ public class Humano extends Personaje {
 	/**
 	 * Realiza la habilidad de raza del humano, el golpe fatal. <br>
 	 * <p>
-	 * El personaje realiza un ataque de menor costo de energía siempre y cuando
+	 * El personaje realiza un ataque de menor costo
+	 * de energía siempre y cuando
 	 * el personaje atacado no muera.
 	 * <p>
-	 * Se debe tener el mínimo de energía necesario para poder realizar el
+	 * Se debe tener el mínimo de energía necesario
+	 * para poder realizar el
 	 * ataque. <br>
 	 * @param atacado
 	 *            Personaje atacado. <br>
@@ -105,8 +112,10 @@ public class Humano extends Personaje {
 	@Override
 	public final boolean habilidadRaza2(final Peleable atacado) {
 		if (super.getEnergia() >= ENERGIAMINIMA) {
-			if (atacado.serAtacado(atacado.getSalud() / DIVISORSALUD) > 0) {
-				super.reducirEnergia(this.getEnergia() / DIVISORENERGIA);
+			if (atacado.serAtacado(atacado
+					.getSalud() / DIVISORSALUD) > 0) {
+				super.reducirEnergia(this
+					.getEnergia() / DIVISORENERGIA);
 				return true;
 			}
 		}
@@ -120,7 +129,7 @@ public class Humano extends Personaje {
 	 */
 	@Override
 	public final String[] getHabilidadesRaza() {
-		return new String[] { "Incentivar", "Golpe Fatal" };
+		return new String[] {"Incentivar", "Golpe Fatal"};
 	}
 
 	/**

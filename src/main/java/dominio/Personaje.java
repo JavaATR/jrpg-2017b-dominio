@@ -10,7 +10,8 @@ import javax.swing.DefaultListModel;
  * Clase Personaje. La cual sirve de base para la creacion de las distintas
  * Razas.
  */
-public abstract class Personaje extends MadreDeTodo implements Peleable, Serializable {
+public abstract class Personaje extends MadreDeTodo
+	implements Peleable, Serializable {
 	/**
 	 * Salud del personaje.
 	 */
@@ -109,8 +110,8 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	 */
 	private static final int ENERGIAMINIMA = 10;
 	/**
-	 * Numero por el cual se divide la destreza del personaje. Para calcular la
-	 * posibilidad de evitar el dano
+	 * Numero por el cual se divide la destreza del personaje.
+	 * Para calcular la posibilidad de evitar el dano
 	 */
 	private static final int DIVISORDEDESTREZA = 1000;
 	/**
@@ -191,8 +192,8 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	private String nombreCasta;
 
 	/**
-	 * Metodo que retorna las habilidades que posee el personaje. Segun la casta
-	 * del mismo.
+	 * Metodo que retorna las habilidades que posee
+	 * el personaje. Segun la casta del mismo.
 	 *
 	 * @return String[] de habilidades casta.
 	 */
@@ -201,30 +202,32 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	}
 
 	/**
-	 * Metodo estatico. Sirve para cargar la tabla de niveles de personaje. <br>
+	 * Metodo estatico. Sirve para cargar la tabla de niveles
+	 *  de personaje. <br>
 	 */
 	public static void cargarTablaNivel() {
 		Personaje.setTablaDeNiveles(new int[CANTIDADNIVELES]);
 		Personaje.getTablaDeNiveles()[0] = 0;
 		Personaje.getTablaDeNiveles()[1] = 0;
 		for (int i = 2; i < CANTIDADNIVELES; i++) {
-			Personaje.getTablaDeNiveles()[i] = Personaje.getTablaDeNiveles()[i - 1] + CONSTANTENIVEL;
+			Personaje.getTablaDeNiveles()[i] =
+					Personaje.getTablaDeNiveles()[i - 1] + CONSTANTENIVEL;
 		}
 	}
 
 	/**
-	 * La clase Personaje es la cual posee todos los atributos. Algunos serán
-	 * completados por las clases hijo (Elfo,Humano,Orco) como por ejemplo el
-	 * array habilidadesRaza[].
+	 * La clase Personaje es la cual posee todos los atributos.
+	 * Algunos serán 	 * completados por las clases hijo
+	 * (Elfo,Humano,Orco) como por ejemplo el array habilidadesRaza[].
 	 * <p>
-	 * Dependiendo de qué instancia es el parámetro casta, se incrementará en 5
-	 * un atributo del personaje
+	 * Dependiendo de qué instancia es el parámetro
+	 * casta, se incrementará en 5 un atributo del personaje
 	 *
 	 * @param nombre
 	 *            Indica el nombre el personaje
 	 * @param casta
-	 *            Indica la casta(Raza) del personaje y con ella el incremento
-	 *            que tendrá cierto atributo
+	 *            Indica la casta(Raza) del personaje y
+	 *            con ella el incremento que tendrá cierto atributo
 	 * @param id
 	 *            Identificador del personaje
 	 */
@@ -256,7 +259,8 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	}
 
 	/**
-	 * La clase Personaje es la cual posee todos los atributos de los personajes
+	 * La clase Personaje es la cual posee todos
+	 * los atributos de los personajes
 	 * del juego.
 	 * <p>
 	 * Algunos serán completados por las clases hijo (Elfo,Humano,Orco) como por
@@ -284,8 +288,10 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	 * @param idPersonaje
 	 *            Id del personaje
 	 */
-	public Personaje(final String nombre, final int salud, final int energia, final int fuerza, final int destreza,
-			final int inteligencia, final Casta casta, final int experiencia, final int nivel, final int idPersonaje) {
+	public Personaje(final String nombre, final int salud, final int energia,
+			final int fuerza, final int destreza, final int inteligencia,
+			final Casta casta, final int experiencia, final int nivel,
+			final int idPersonaje) {
 		super(fuerza, 0, nivel, nombre);
 		this.salud = salud;
 		this.energia = energia;

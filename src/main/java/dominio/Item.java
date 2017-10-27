@@ -57,43 +57,47 @@ public class Item implements Serializable {
 
 	/**
 	 * Crea un item. <br>
-	 * @param idItem
+	 * @param itemId
 	 *            Id del item. <br>
-	 * @param nombre
+	 * @param name
 	 *            Nombre del item. <br>
-	 * @param wearLocation
+	 * @param wearLoc
 	 *            Ubicación del item en el personaje. <br>
-	 * @param bonusSalud
+	 * @param saludBonus
 	 *            Bonus de salud del item. <br>
-	 * @param bonusEnergia
+	 * @param energiaBonus
 	 *            Bonus de energía del item. <br>
-	 * @param bonusFuerza
+	 * @param fuerzaBonus
 	 *            Bonus de fuerza del item. <br>
-	 * @param bonusDestreza
+	 * @param destrezaBonus
 	 *            Bonus de destreza del item. <br>
-	 * @param bonusInteligencia
+	 * @param inteligenciaBonus
 	 *            Bonus de inteligencia del item. <br>
-	 * @param foto
+	 * @param picture
 	 *            Dirección del archivo de la foto. <br>
-	 * @param fotoEquipado
-	 *            Dirección del archivo de la foto cuando el item esta equipado.
+	 * @param equipadoFoto
+	 *            Dirección del archivo de la foto
+	 *            cuando el item esta equipado.
 	 *            <br>
 	 * @throws IOException
 	 *             La dirección de la foto del item es erronea. <br>
 	 */
-	public Item(final int idItem, final String nombre, final int wearLocation, final int bonusSalud,
-			final int bonusEnergia, final int bonusFuerza, final int bonusDestreza, final int bonusInteligencia,
-			final String foto, final String fotoEquipado) throws IOException {
-		this.foto = foto;
-		this.idItem = idItem;
-		this.nombre = nombre;
-		this.wearLocation = wearLocation;
-		this.bonusSalud = bonusSalud;
-		this.bonusEnergia = bonusEnergia;
-		this.bonusFuerza = bonusFuerza;
-		this.bonusDestreza = bonusDestreza;
-		this.bonusInteligencia = bonusInteligencia;
-		this.fotoEquipado = fotoEquipado;
+	public Item(final int itemId, final String name,
+			final int wearLoc, final int saludBonus,
+			final int energiaBonus, final int fuerzaBonus,
+			final int destrezaBonus, final int inteligenciaBonus,
+			final String picture, final String equipadoFoto)
+					throws IOException {
+		this.foto = picture;
+		this.idItem = itemId;
+		this.nombre = name;
+		this.wearLocation = wearLoc;
+		this.bonusSalud = saludBonus;
+		this.bonusEnergia = energiaBonus;
+		this.bonusFuerza = fuerzaBonus;
+		this.bonusDestreza = destrezaBonus;
+		this.bonusInteligencia = inteligenciaBonus;
+		this.fotoEquipado = equipadoFoto;
 	}
 
 	/**

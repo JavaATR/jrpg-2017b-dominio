@@ -9,7 +9,7 @@ public class MyRandomStub extends RandomGenerator {
 	 */
 	private final double valDouble;
 	/**
-	 * Valor que devolverá nextInt();
+	 * Valor que devolverá nextInt().
 	 */
 	private final int valInt;
 

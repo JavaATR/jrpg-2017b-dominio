@@ -54,16 +54,21 @@ public class Elfo extends Personaje {
 	 * @param idPersonaje
 	 *            Id del personaje. <br>
 	 */
-	public Elfo(final String nombre, final int salud, final int energia, final int fuerza, final int destreza,
-			final int inteligencia, final Casta casta, final int experiencia, final int nivel, final int idPersonaje) {
-		super(nombre, salud, energia, fuerza, destreza, inteligencia, casta, experiencia, nivel, idPersonaje);
+	public Elfo(final String nombre, final int salud, final int energia,
+			final int fuerza,
+			final int destreza, final int inteligencia,
+				final Casta casta, final int experiencia,
+					final int nivel,
+					final int idPersonaje) {
+		super(nombre, salud, energia, fuerza, destreza, inteligencia,
+				casta, experiencia, nivel, idPersonaje);
 	}
 
 	/**
 	 * Realiza la habilidad de raza del elfo, el golpe de nivel.
 	 * <p>
-	 * El ataque consiste en que realiza un ataque con una fuerza de 10 niveles
-	 * adicionales.
+	 * El ataque consiste en que realiza un ataque
+	 * con una fuerza de 10 niveles adicionales.
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario para poder realizar el
 	 * ataque. <br>
@@ -76,7 +81,9 @@ public class Elfo extends Personaje {
 	public final boolean habilidadRaza1(final Peleable atacado) {
 		if (super.getEnergia() >= ENERGIAMINIMA) {
 			super.reducirEnergia(ENERGIAMINIMA);
-			if (atacado.serAtacado(super.getFuerza() + super.getNivel() * MULTIPLICADORNIVEL) > 0) {
+			if (atacado.serAtacado(super.getFuerza()
+					+ super.getNivel()
+						* MULTIPLICADORNIVEL) > 0) {
 				return true;
 			}
 		}
@@ -112,7 +119,7 @@ public class Elfo extends Personaje {
 	 */
 	@Override
 	public final String[] getHabilidadesRaza() {
-		return new String[] { "Golpe Level", "Ataque Bosque" };
+		return new String[] {"Golpe Level", "Ataque Bosque"};
 	}
 
 	/**

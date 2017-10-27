@@ -64,7 +64,7 @@ public interface Peleable {
 	boolean estaVivo();
 
 	/**
-	 * Devuelve el nombre del personaje. <br> 
+	 * Devuelve el nombre del personaje. <br>
 	 * @return Nombre del personaje. <br>
 	 */
 	String getNombre();

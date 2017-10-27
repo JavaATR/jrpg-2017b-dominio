@@ -43,7 +43,8 @@ public abstract class MadreDeTodo {
 	 * @param nombre
 	 *            Nombre del personaje. <br>
 	 */
-	public MadreDeTodo(final int fuerza, final int defensa, final int nivel, final String nombre) {
+	public MadreDeTodo(final int fuerza, final int defensa,
+			final int nivel, final String nombre) {
 		this.fuerza = fuerza;
 		this.defensa = defensa;
 		this.nivel = nivel;

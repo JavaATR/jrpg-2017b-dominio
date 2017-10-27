@@ -35,7 +35,8 @@ public class Asesino extends Casta {
 	 * @param danioCrit
 	 *            Multiplicador de daño crítico. <br>
 	 */
-	public Asesino(final double probCrit, final double evasion, final double danioCrit) {
+	public Asesino(final double probCrit, final double evasion,
+			final double danioCrit) {
 		super(probCrit, evasion, danioCrit);
 	}
 
@@ -61,10 +62,13 @@ public class Asesino extends Casta {
 	 *         <b>false</b> de lo contrario. <br>
 	 */
 	@Override
-	public final boolean habilidad1(final Personaje caster, final Peleable atacado) {
+	public final boolean habilidad1(final Personaje caster,
+			final Peleable atacado) {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
-			if (atacado.serAtacado((int) (caster.getAtaque() * caster.getCasta().getDanoCritico())) > 0) {
+			if (atacado.serAtacado((int) (caster.getAtaque()
+					* caster.getCasta()
+						.getDanoCritico())) > 0) {
 				return true;
 			}
 		}
@@ -86,13 +90,16 @@ public class Asesino extends Casta {
 	 *         <b>false</b> de lo contrario. <br>
 	 */
 	@Override
-	public final boolean habilidad2(final Personaje caster, final Peleable atacado) {
+	public final boolean habilidad2(final Personaje caster,
+			final Peleable atacado) {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
-			if (super.getProbabilidadEvitarDano() + AUMENTARPROBEVITAR < MAXIMAEVASION) {
+			if (super.getProbabilidadEvitarDano()
+					+ AUMENTARPROBEVITAR < MAXIMAEVASION) {
 				super.aumentarEvitarDano(AUMENTARPROBEVITAR);
 			} else {
-				super.setProbabilidadEvitarDano(PROBEVITARDANIO);
+				super.
+			setProbabilidadEvitarDano(PROBEVITARDANIO);
 			}
 			return true;
 		}
@@ -108,7 +115,8 @@ public class Asesino extends Casta {
 	 * @return <b>false</b>
 	 */
 	@Override
-	public final boolean habilidad3(final Personaje caster, final Peleable atacado) {
+	public final boolean habilidad3(final Personaje caster,
+			final Peleable atacado) {
 		return false;
 	}
 
@@ -154,6 +162,7 @@ public class Asesino extends Casta {
 	 */
 	@Override
 	public final String[] getHabilidadesCasta() {
-		return new String[] { "Golpe Critico", "Aumentar Evasion", "Robar" };
+		return new String[] {"Golpe Critico", "Aumentar Evasion",
+				"Robar"};
 	}
 }
