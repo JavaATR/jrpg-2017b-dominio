@@ -12,7 +12,7 @@ import javax.imageio.ImageIO;
  */
 public class Item implements Serializable {
 	/**
-	 * 
+	 * Serial versión. <br>
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
@@ -27,10 +27,6 @@ public class Item implements Serializable {
 	 * Nombre del item. <br>
 	 */
 	private  String nombre;
-	/**
-	 * Ubicación en el cuerpo del item. <br>
-	 */
-	private  int wearLocation;
 	/**
 	 * Bonus de salud del item. <br>
 	 */
@@ -83,16 +79,12 @@ public class Item implements Serializable {
 	 * @throws IOException
 	 *             La dirección de la foto del item es erronea. <br>
 	 */
-	public Item(final int idItem, final String name,
-			final int wearLoc, final int saludBonus,
-			final int energiaBonus, final int fuerzaBonus,
-			final int destrezaBonus, final int inteligenciaBonus,
-			final String picture, final String equipadoFoto)
-					throws IOException {
+	public Item(final int idItem, final String name, final int saludBonus, final int energiaBonus,
+			final int fuerzaBonus, final int destrezaBonus, final int inteligenciaBonus, final String picture,
+			final String equipadoFoto) throws IOException {
 		this.foto = picture;
 		this.idItem = idItem;
 		this.nombre = name;
-		this.wearLocation = wearLoc;
 		this.bonusSalud = saludBonus;
 		this.bonusEnergia = energiaBonus;
 		this.bonusFuerza = fuerzaBonus;
@@ -101,6 +93,9 @@ public class Item implements Serializable {
 		this.fotoEquipado = equipadoFoto;
 	}
 	
+	/**
+	 * Crea un item. <br>
+	 */
 	public Item(){
 		
 	}
@@ -170,11 +165,6 @@ public class Item implements Serializable {
 	public int getIdItem() {
 		return idItem;
 	}
-	
-
-	public int getWearLocation() {
-		return wearLocation;
-	}
 
 	public String getFotoEquipado() {
 		return fotoEquipado;
@@ -190,10 +180,6 @@ public class Item implements Serializable {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public void setWearLocation(int wearLocation) {
-		this.wearLocation = wearLocation;
 	}
 
 	public void setBonusSalud(int bonusSalud) {
