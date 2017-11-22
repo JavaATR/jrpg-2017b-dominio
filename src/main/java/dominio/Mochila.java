@@ -110,11 +110,11 @@ public class Mochila implements Serializable {
 	 */
 	public void ordenarMochila(final ArrayList<Item> items) {
 		// Reasigno los items para que sea coherente con la lista de items del personaje. 
-		for (int index = 1; index <= items.size(); index++) {
+		for (int index = 0; index < items.size(); index++) {
 			this.agregarItem(items.get(index).getIdItem(), index);
 		}
 		// Relleno los vacios o los items que se movieron con -1.
-		for (int others = items.size() + 1; others < 21; others++) {
+		for (int others = items.size(); others < 20; others++) {
 			this.agregarItem(-1, others);
 		}
 	}
