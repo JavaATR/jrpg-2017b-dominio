@@ -23,18 +23,18 @@ public class TestTrueque {
 		DefaultListModel<String> aSacar = new DefaultListModel<String>();
 		aSacar.addElement("NombreItem1");
 		try {
-			Item item1 = new Item(20, "NombreItem1", 0, 10, 0, 0, 0, 0, "foto1", "fotoE1");
-			Item item3 = new Item(20, "NombreItem3", 0, 10, 0, 0, 0, 0, "foto3", "fotoE3");
+			Item item1 = new Item(20, "NombreItem1", 10, 0, 0, 0, 0, "foto1", "fotoE1");
+			Item item3 = new Item(20, "NombreItem3", 10, 0, 0, 0, 0, "foto3", "fotoE3");
 
-			Item item5 = new Item(20, "NombreItem5", 0, 10, 0, 0, 0, 0, "foto5", "fotoE5");
-			Item item6 = new Item(20, "NombreItem6", 0, 10, 0, 0, 0, 0, "foto6", "fotoE6");
+			Item item5 = new Item(20, "NombreItem5", 10, 0, 0, 0, 0, "foto5", "fotoE5");
+			Item item6 = new Item(20, "NombreItem6", 10, 0, 0, 0, 0, "foto6", "fotoE6");
 
 			aPoner.add(item5);
 			aPoner.add(item6);
-			p1.anadirItem(new Item(20, "NombreItem1", 0, 10, 0, 0, 0, 0, "foto1", "fotoE1"));
-			p1.anadirItem(new Item(20, "NombreItem2", 0, 10, 0, 0, 0, 0, "foto2", "fotoE2"));
+			p1.anadirItem(new Item(20, "NombreItem1", 10, 0, 0, 0, 0, "foto1", "fotoE1"));
+			p1.anadirItem(new Item(20, "NombreItem2", 10, 0, 0, 0, 0, "foto2", "fotoE2"));
 			p1.anadirItem(item3);
-			p1.anadirItem(new Item(20, "NombreItem4", 0, 10, 0, 0, 0, 0, "foto4", "fotoE4"));
+			p1.anadirItem(new Item(20, "NombreItem4", 10, 0, 0, 0, 0, "foto4", "fotoE4"));
 			p1.trueque(p1.getItems(), aPoner, aSacar);
 			Assert.assertTrue(p1.getItems().contains(item5));
 			Assert.assertTrue(p1.getItems().contains(item6));
@@ -56,16 +56,16 @@ public class TestTrueque {
 		aSacar.addElement("NombreItem1");
 		aSacar.addElement("NombreItem3");
 		try {
-			Item item1 = new Item(20, "NombreItem1", 0, 10, 0, 0, 0, 0, "foto1", "fotoE1");
-			Item item3 = new Item(20, "NombreItem3", 0, 10, 0, 0, 0, 0, "foto3", "fotoE3");
+			Item item1 = new Item(20, "NombreItem1", 10, 0, 0, 0, 0, "foto1", "fotoE1");
+			Item item3 = new Item(20, "NombreItem3", 10, 0, 0, 0, 0, "foto3", "fotoE3");
 
-			Item item5 = new Item(20, "NombreItem5", 0, 10, 0, 0, 0, 0, "foto5", "fotoE5");
+			Item item5 = new Item(20, "NombreItem5", 10, 0, 0, 0, 0, "foto5", "fotoE5");
 
 			aPoner.add(item5);
-			p1.anadirItem(new Item(20, "NombreItem1", 0, 10, 0, 0, 0, 0, "foto1", "fotoE1"));
-			p1.anadirItem(new Item(20, "NombreItem2", 0, 10, 0, 0, 0, 0, "foto2", "fotoE2"));
+			p1.anadirItem(new Item(20, "NombreItem1", 10, 0, 0, 0, 0, "foto1", "fotoE1"));
+			p1.anadirItem(new Item(20, "NombreItem2", 10, 0, 0, 0, 0, "foto2", "fotoE2"));
 			p1.anadirItem(item3);
-			p1.anadirItem(new Item(20, "NombreItem4", 0, 10, 0, 0, 0, 0, "foto4", "fotoE4"));
+			p1.anadirItem(new Item(20, "NombreItem4", 10, 0, 0, 0, 0, "foto4", "fotoE4"));
 			p1.trueque(p1.getItems(), aPoner, aSacar);
 			Assert.assertTrue(p1.getItems().contains(item5));
 			Assert.assertFalse(p1.getItems().contains(item3));
