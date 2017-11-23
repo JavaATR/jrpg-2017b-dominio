@@ -62,6 +62,11 @@ public class Hechicero extends Casta {
 			final Peleable atacado) {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
+			
+			if (atacado.getModoDios())
+				if (!caster.getModoDios())
+					return true;
+			
 			if (atacado.serAtacado((int) (caster
 					.calcularPuntosDeMagia()
 					* MULTIPLICADORMAGIA)) > 0) {
@@ -119,6 +124,11 @@ public class Hechicero extends Casta {
 			final Peleable atacado) {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
+			
+			if (atacado.getModoDios())
+				if (!caster.getModoDios())
+					return true;
+			
 			if (atacado instanceof Personaje) {
 				int energiaRobada = ((Personaje) atacado)
 						.serDesernegizado(caster

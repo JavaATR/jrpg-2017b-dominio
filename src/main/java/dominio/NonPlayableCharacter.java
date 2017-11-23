@@ -10,6 +10,10 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	 */
 	private static final int ELEGIRDIF = 3;
 	/**
+	 * Estado de modo dios del NPC.
+	 */
+	private boolean modoDios;
+	/**
 	 * Salud del NPC.
 	 */
 	private int salud;
@@ -117,6 +121,16 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	@Override
 	public final boolean estaVivo() {
 		return salud > 0;
+	}
+	
+	/**
+	 * Retorna un booleano que indica si el NPC está en modo dios.
+	 *
+	 * @return Devuelve un booleano que indica si el NPC está en modo dios
+	 */
+	@Override
+	public final boolean getModoDios() {
+		return modoDios;
 	}
 
 	/**

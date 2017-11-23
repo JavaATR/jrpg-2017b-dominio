@@ -40,7 +40,7 @@ public class Guerrero extends Casta {
 	}
 
 	/**
-	 * Realiza la la habilidad de casta del guerrero, ataque doble.
+	 * Realiza la habilidad de casta del guerrero, ataque doble.
 	 * <p>
 	 * El personaje realiza un ataque doble.
 	 * <p>
@@ -58,6 +58,11 @@ public class Guerrero extends Casta {
 			final Peleable atacado) {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
+			
+			if (atacado.getModoDios())
+				if (!caster.getModoDios())
+					return true;
+			
 			if (atacado.serAtacado(caster.getAtaque()
 					* MULTIPLICADORFUERZA) > 0) {
 				return true;
@@ -67,7 +72,7 @@ public class Guerrero extends Casta {
 	}
 
 	/**
-	 * Realiza la la habilidad de casta del guerrero, aumentar defensa.
+	 * Realiza la habilidad de casta del guerrero, aumentar defensa.
 	 * <p>
 	 * El personaje aumenta su defensa.
 	 * <p>
@@ -92,7 +97,7 @@ public class Guerrero extends Casta {
 	}
 
 	/**
-	 * Realiza la la habilidad de casta del guerrero, ignorar defensa.
+	 * Realiza la habilidad de casta del guerrero, ignorar defensa.
 	 * <p>
 	 * El personaje ignora la defensa del atacado y lo ataca.
 	 * <p>
@@ -110,6 +115,11 @@ public class Guerrero extends Casta {
 			final Peleable atacado) {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
+			
+			if (atacado.getModoDios())
+				if (!caster.getModoDios())
+					return true;
+			
 			if (atacado instanceof Personaje) {
 				int defensaOriginal = ((Personaje) atacado)
 						.getDefensa();
@@ -136,7 +146,6 @@ public class Guerrero extends Casta {
 	@Override
 	public final int recibirFuerzaBonus() {
 		return BONUSFUERZA;
-
 	}
 
 	/**

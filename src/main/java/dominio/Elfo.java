@@ -81,6 +81,11 @@ public class Elfo extends Personaje {
 	public final boolean habilidadRaza1(final Peleable atacado) {
 		if (super.getEnergia() >= ENERGIAMINIMA) {
 			super.reducirEnergia(ENERGIAMINIMA);
+			
+			if (atacado.getModoDios())
+				if (!super.getModoDios())
+					return true;
+			
 			if (atacado.serAtacado(super.getFuerza()
 					+ super.getNivel()
 						* MULTIPLICADORNIVEL) > 0) {
@@ -106,6 +111,11 @@ public class Elfo extends Personaje {
 	public final boolean habilidadRaza2(final Peleable atacado) {
 		if (super.getEnergia() >= ENERGIAMINIMA) {
 			super.reducirEnergia(ENERGIAMINIMA);
+			
+			if (atacado.getModoDios())
+				if (!super.getModoDios())
+					return true;
+			
 			if (atacado.serAtacado((super.getMagia())) > 0) {
 				return true;
 			}

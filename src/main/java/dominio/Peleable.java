@@ -11,6 +11,12 @@ public interface Peleable {
 	 * @return Daño neto recibido. <br>
 	 */
 	int serAtacado(int dano);
+	
+	/**
+	 * Devueve el estado de modo dios del personaje. <br>
+	 * @return Salud del personaje. <br>
+	 */
+	boolean getModoDios();
 
 	/**
 	 * Devuelve la salud del personaje. <br>

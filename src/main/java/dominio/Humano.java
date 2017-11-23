@@ -73,7 +73,7 @@ public class Humano extends Personaje {
 	/**
 	 * Realiza la habilidad de raza del humano, incentivar.
 	 * <p>
-	 * EL personaje aumenta su ataque con respecto
+	 * El personaje aumenta su ataque con respecto
 	 * a su capacidad de magia. <br>
 	 * <p>
 	 * Se debe tener el mínimo de energía necesario
@@ -111,7 +111,13 @@ public class Humano extends Personaje {
 	 */
 	@Override
 	public final boolean habilidadRaza2(final Peleable atacado) {
-		if (super.getEnergia() >= ENERGIAMINIMA) {
+		if (super.getEnergia() >= ENERGIAMINIMA) {			
+			if (atacado.getModoDios())
+				if (!super.getModoDios()) {
+					super.reducirEnergia(this.getEnergia() / DIVISORENERGIA);
+					return true;
+				}
+			
 			if (atacado.serAtacado(atacado
 					.getSalud() / DIVISORSALUD) > 0) {
 				super.reducirEnergia(this

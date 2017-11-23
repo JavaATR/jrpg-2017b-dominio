@@ -120,6 +120,10 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	 */
 	private static final int POS_Y_I = 0;
 	/**
+	 * Indicador del truco modo dios del personaje. <br>
+	 */
+	private boolean modoDios;
+	/**
 	 * Puntos de ataque del personaje. <br>
 	 */
 	private int ataque;
@@ -284,6 +288,21 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 		this.idPersonaje = idPersonaje;
 		this.ataque = this.calcularPuntosDeAtaque();
 		this.magia = this.calcularPuntosDeMagia();
+	}
+	
+	/**
+	 * Devueve el estado de modo dios del personaje. <br>
+	 * @return Estado de modo dios del personaje. <br>
+	 */
+	public final boolean getModoDios() {
+		return modoDios;
+	}
+
+	/**
+	 * Establece el estado de modo dios del personaje. <br>
+	 */
+	public final void setModoDios() {
+		this.modoDios = true;
 	}
 
 	/**
