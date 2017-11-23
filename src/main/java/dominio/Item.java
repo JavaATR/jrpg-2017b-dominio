@@ -10,54 +10,51 @@ import javax.imageio.ImageIO;
 /**
  * Clase que administra los items del personaje. <br>
  */
-@SuppressWarnings("serial")
 public class Item implements Serializable {
+	/**
+	 * Serial versión. <br>
+	 */
+	private static final long serialVersionUID = 1L;
 	/**
 	 * ID del item. <br>
 	 */
-	private final int idItem;
+	private  int idItem;
 	/**
 	 * Foto del item. <br>
 	 */
-	private final String foto;
+	private  String foto;
 	/**
 	 * Nombre del item. <br>
 	 */
-	private final String nombre;
-	/**
-	 * Ubicación en el cuerpo del item. <br>
-	 */
-	@SuppressWarnings("unused")
-	private final int wearLocation;
+	private  String nombre;
 	/**
 	 * Bonus de salud del item. <br>
 	 */
-	private final int bonusSalud;
+	private  int bonusSalud;
 	/**
 	 * Bonus de energía del item. <br>
 	 */
-	private final int bonusEnergia;
+	private  int bonusEnergia;
 	/**
 	 * Bonus de fuerza del item. <br>
 	 */
-	private final int bonusFuerza;
+	private  int bonusFuerza;
 	/**
 	 * Bonus de destreza del item. <br>
 	 */
-	private final int bonusDestreza;
+	private  int bonusDestreza;
 	/**
 	 * Bonus de inteligencia del item. <br>
 	 */
-	private final int bonusInteligencia;
+	private  int bonusInteligencia;
 	/**
 	 * Foto del item. <br>
 	 */
-	@SuppressWarnings("unused")
-	private final String fotoEquipado;
+	private  String fotoEquipado;
 
 	/**
 	 * Crea un item. <br>
-	 * @param itemId
+	 * @param idItem
 	 *            Id del item. <br>
 	 * @param name
 	 *            Nombre del item. <br>
@@ -82,22 +79,25 @@ public class Item implements Serializable {
 	 * @throws IOException
 	 *             La dirección de la foto del item es erronea. <br>
 	 */
-	public Item(final int itemId, final String name,
-			final int wearLoc, final int saludBonus,
-			final int energiaBonus, final int fuerzaBonus,
-			final int destrezaBonus, final int inteligenciaBonus,
-			final String picture, final String equipadoFoto)
-					throws IOException {
+	public Item(final int idItem, final String name, final int saludBonus, final int energiaBonus,
+			final int fuerzaBonus, final int destrezaBonus, final int inteligenciaBonus, final String picture,
+			final String equipadoFoto) throws IOException {
 		this.foto = picture;
-		this.idItem = itemId;
+		this.idItem = idItem;
 		this.nombre = name;
-		this.wearLocation = wearLoc;
 		this.bonusSalud = saludBonus;
 		this.bonusEnergia = energiaBonus;
 		this.bonusFuerza = fuerzaBonus;
 		this.bonusDestreza = destrezaBonus;
 		this.bonusInteligencia = inteligenciaBonus;
 		this.fotoEquipado = equipadoFoto;
+	}
+	
+	/**
+	 * Crea un item. <br>
+	 */
+	public Item(){
+		
 	}
 
 	/**
@@ -106,8 +106,17 @@ public class Item implements Serializable {
 	 * @throws IOException
 	 *             El path de la imagen es errónea. <br>
 	 */
-	public BufferedImage getFoto() throws IOException {
+	public BufferedImage getImagenItem() throws IOException {
 		return ImageIO.read(new File("recursos//" + foto));
+	}
+	
+	
+	/**
+	 * Devuelve el path de la foto. <br>
+	 * @return Path de la foto. <br>
+	 */
+	public String getFoto() {
+		return foto;
 	}
 
 	/**
@@ -164,5 +173,45 @@ public class Item implements Serializable {
 	 */
 	public int getIdItem() {
 		return idItem;
+	}
+
+	public String getFotoEquipado() {
+		return fotoEquipado;
+	}
+
+	public void setIdItem(int idItem) {
+		this.idItem = idItem;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public void setBonusSalud(int bonusSalud) {
+		this.bonusSalud = bonusSalud;
+	}
+
+	public void setBonusEnergia(int bonusEnergia) {
+		this.bonusEnergia = bonusEnergia;
+	}
+
+	public void setBonusFuerza(int bonusFuerza) {
+		this.bonusFuerza = bonusFuerza;
+	}
+
+	public void setBonusDestreza(int bonusDestreza) {
+		this.bonusDestreza = bonusDestreza;
+	}
+
+	public void setBonusInteligencia(int bonusInteligencia) {
+		this.bonusInteligencia = bonusInteligencia;
+	}
+
+	public void setFotoEquipado(String fotoEquipado) {
+		this.fotoEquipado = fotoEquipado;
 	}
 }
