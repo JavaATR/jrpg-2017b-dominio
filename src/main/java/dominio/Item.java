@@ -106,8 +106,17 @@ public class Item implements Serializable {
 	 * @throws IOException
 	 *             El path de la imagen es errónea. <br>
 	 */
-	public BufferedImage getFoto() throws IOException {
+	public BufferedImage getImagenItem() throws IOException {
 		return ImageIO.read(new File("recursos//" + foto));
+	}
+	
+	
+	/**
+	 * Devuelve el path de la foto. <br>
+	 * @return Path de la foto. <br>
+	 */
+	public String getFoto() {
+		return foto;
 	}
 
 	/**

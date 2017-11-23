@@ -2,6 +2,8 @@ package dominio;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Clase que administra la mochila de un personaje. <br>
@@ -127,7 +129,7 @@ public class Mochila implements Serializable {
 	 * @param posicion
 	 *            Posición que ocupa en la mochila. <br>
 	 */
-	private void agregarItem(final int itemId, final int posicion) {
+	public void agregarItem(final int itemId, final int posicion) {
 		switch (posicion) {
 		case 1:
 			this.item1 = itemId;
@@ -547,5 +549,74 @@ public class Mochila implements Serializable {
 	 */
 	public void setItem20(int item20) {
 		this.item20 = item20;
+	}
+	
+	/**
+	 * Devuelve la cantidad de items en el inventario. <br>
+	 * @return Cantidad de items en el inventario. <br>
+	 */
+	public int cantidadItems(){
+		int cantidadItems = 0;
+		if (this.item1 != -1) {
+			cantidadItems++;
+		}
+		if (this.item2 != -1) {
+			cantidadItems++;
+		}
+		if (this.item3 != -1) {
+			cantidadItems++;
+		}
+		if (this.item4 != -1) {
+			cantidadItems++;
+		}
+		if (this.item5 != -1) {
+			cantidadItems++;
+		}
+		if (this.item6 != -1) {
+			cantidadItems++;
+		}
+		if (this.item7 != -1) {
+			cantidadItems++;
+		}
+		if (this.item8 != -1) {
+			cantidadItems++;
+		}
+		if (this.item9 != -1) {
+			cantidadItems++;
+		}
+		if (this.item10 != -1) {
+			cantidadItems++;
+		}
+		if (this.item11 != -1) {
+			cantidadItems++;
+		}
+		if (this.item12 != -1) {
+			cantidadItems++;
+		}
+		if (this.item13 != -1) {
+			cantidadItems++;
+		}
+		if (this.item14 != -1) {
+			cantidadItems++;
+		}
+		if (this.item15 != -1) {
+			cantidadItems++;
+		}
+		if (this.item16 != -1) {
+			cantidadItems++;
+		}
+		if (this.item17 != -1) {
+			cantidadItems++;
+		}
+		if (this.item18 != -1) {
+			cantidadItems++;
+		}
+		if (this.item19 != -1) {
+			cantidadItems++;
+		}
+		if (this.item20 != -1) {
+			cantidadItems++;
+		}
+		return cantidadItems;
 	}
 }
