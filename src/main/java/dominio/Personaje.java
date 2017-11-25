@@ -222,14 +222,14 @@ public abstract class Personaje extends MadreDeTodo
      *
      * @param nombre
      *            Nombre del personaje. <br>
-     * @param casta
+     * @param valorCasta
      *            Casta del personaje. <br>
      * @param id
      *            Id del personaje. <br>
      */
-    public Personaje(final String nombre, final Casta casta, final int id) {
+    public Personaje(final String nombre, final Casta valorCasta, final int id) {
         super(FUERZA_INICIAL, DEFENSA_INICIAL, NIVEL_INICIAL, nombre);
-        this.casta = casta;
+        this.casta = valorCasta;
         this.idPersonaje = id;
         this.experiencia = EXPERIENCIA_INICIAL;
         this.inteligencia = INTELIGENCIA_INICIAL;
@@ -238,13 +238,13 @@ public abstract class Personaje extends MadreDeTodo
         this.energiaTope = ENERGIA_TOPE_INICIAL;
         aumentarEnergiaTope(getEnergiaBonus());
         aumentarSaludTope(getSaludBonus());
-        aumentarDestreza(casta.recibirDestrezaBonus());
-        aumentarFuerza(casta.recibirFuerzaBonus());
-        aumentarInteligencia(casta.recibirInteligenciaBonus());
+        aumentarDestreza(valorCasta.recibirDestrezaBonus());
+        aumentarFuerza(valorCasta.recibirFuerzaBonus());
+        aumentarInteligencia(valorCasta.recibirInteligenciaBonus());
         this.nombreRaza = getNombreRaza();
-        this.nombreCasta = casta.getNombreCasta();
+        this.nombreCasta = valorCasta.getNombreCasta();
         this.habilidadesRaza = getHabilidadesRaza();
-        this.habilidadesCasta = casta.getHabilidadesCasta();
+        this.habilidadesCasta = valorCasta.getHabilidadesCasta();
         this.x = POS_X_I;
         this.y = POS_Y_I;
         this.salud = saludTope;
@@ -259,40 +259,40 @@ public abstract class Personaje extends MadreDeTodo
      *
      * @param nombre
      *            Nombre del personaje. <br>
-     * @param salud
+     * @param health
      *            Salud del personaje. <br>
-     * @param energia
+     * @param energy
      *            Energia del personaje. <br>
      * @param fuerza
      *            Fuerza del personaje. <br>
-     * @param destreza
+     * @param skill
      *            Destreza del personaje. <br>
-     * @param inteligencia
+     * @param intelligence
      *            Inteligencia del personaje. <br>
-     * @param casta
+     * @param valorCasta
      *            Casta del personaje. <br>
-     * @param experiencia
+     * @param experience
      *            Experiencia del personaje. <br>
      * @param nivel
      *            Nivel del personaje. <br>
-     * @param idPersonaje
+     * @param personajeId
      *            Id del personaje. <br>
      */
-    public Personaje(final String nombre, final int salud, final int energia,
-            final int fuerza, final int destreza, final int inteligencia,
-            final Casta casta, final int experiencia, final int nivel,
-            final int idPersonaje) {
+    public Personaje(final String nombre, final int health, final int energy,
+            final int fuerza, final int skill, final int intelligence,
+            final Casta valorCasta, final int experience, final int nivel,
+            final int personajeId) {
         super(fuerza, 0, nivel, nombre);
-        this.salud = salud;
-        this.energia = energia;
-        this.destreza = destreza;
-        this.aumentarDefensa(destreza);
-        this.inteligencia = inteligencia;
-        this.casta = casta;
-        this.experiencia = experiencia;
+        this.salud = health;
+        this.energia = energy;
+        this.destreza = skill;
+        this.aumentarDefensa(skill);
+        this.inteligencia = intelligence;
+        this.casta = valorCasta;
+        this.experiencia = experience;
         this.saludTope = this.salud;
         this.energiaTope = this.energia;
-        this.idPersonaje = idPersonaje;
+        this.idPersonaje = personajeId;
         this.ataque = this.calcularPuntosDeAtaque();
         this.magia = this.calcularPuntosDeMagia();
     }
@@ -326,12 +326,12 @@ public abstract class Personaje extends MadreDeTodo
     /**
      * Establece el ataque del personaje. <br>
      *
-     * @param ataque
+     * @param attack
      *            Puntos de ataque. <br>
      */
     @Override
-    public final void setAtaque(final int ataque) {
-        this.ataque = ataque;
+    public final void setAtaque(final int attack) {
+        this.ataque = attack;
     }
 
     /**
@@ -347,11 +347,11 @@ public abstract class Personaje extends MadreDeTodo
     /**
      * Establece la magia del personaje. <br>
      *
-     * @param magia
+     * @param magic
      *            Puntos de magia. <br>
      */
-    public final void setMagia(final int magia) {
-        this.magia = magia;
+    public final void setMagia(final int magic) {
+        this.magia = magic;
     }
 
     /**
@@ -366,12 +366,12 @@ public abstract class Personaje extends MadreDeTodo
     /**
      * Establece la alianza del personaje. <br>
      *
-     * @param clan
+     * @param valorClan
      *            Nueva alianza. <br>
      */
-    public final void setClan(final Alianza clan) {
-        this.clan = clan;
-        clan.anadirPersonaje(this);
+    public final void setClan(final Alianza valorClan) {
+        this.clan = valorClan;
+        valorClan.anadirPersonaje(this);
     }
 
     /**
@@ -647,12 +647,12 @@ public abstract class Personaje extends MadreDeTodo
     /**
      * Curan al personaje. <br>
      *
-     * @param salud
+     * @param health
      *            Puntos de salud restaurado. <br>
      */
-    public final void serCurado(final int salud) {
-        if ((this.salud + salud) <= this.saludTope) {
-            this.salud += salud;
+    public final void serCurado(final int health) {
+        if ((this.salud + health) <= this.saludTope) {
+            this.salud += health;
         } else {
             this.salud = this.saludTope;
         }
@@ -661,12 +661,12 @@ public abstract class Personaje extends MadreDeTodo
     /**
      * El personaje es energizado. <br>
      *
-     * @param energia
+     * @param energy
      *            Puntos de energía restaurado. <br>
      */
-    public final void serEnergizado(final int energia) {
-        if ((this.energia + energia) <= this.energiaTope) {
-            this.energia += energia;
+    public final void serEnergizado(final int energy) {
+        if ((this.energia + energy) <= this.energiaTope) {
+            this.energia += energy;
         } else {
             this.energia = this.energiaTope;
         }
@@ -725,21 +725,21 @@ public abstract class Personaje extends MadreDeTodo
      *
      * @param fuerza
      *            Puntos de fuerza. <br>
-     * @param destreza
+     * @param skill
      *            Puntos de destreza. <br>
-     * @param inteligencia
+     * @param intelligence
      *            Punto de inteligencia. <br>
      */
-    public final void AsignarPuntosSkills(final int fuerza, final int destreza,
-            final int inteligencia) {
+    public final void AsignarPuntosSkills(final int fuerza, final int skill,
+            final int intelligence) {
         if (this.getFuerza() + fuerza <= FUERZA_MAXIMA) {
             this.aumentarFuerza(fuerza);
         }
-        if (this.destreza + destreza <= DEFENSA_MAXIMA) {
-            this.destreza += destreza;
+        if (this.destreza + skill <= DEFENSA_MAXIMA) {
+            this.destreza += skill;
         }
-        if (this.inteligencia + inteligencia <= INTELIGENCIA_MAXIMA) {
-            this.inteligencia += inteligencia;
+        if (this.inteligencia + intelligence <= INTELIGENCIA_MAXIMA) {
+            this.inteligencia += intelligence;
         }
         this.modificarAtributos();
     }

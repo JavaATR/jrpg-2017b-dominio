@@ -16,14 +16,14 @@ public class MyRandomStub extends RandomGenerator {
     /**
      * Constructor del MyRandomStub. <br>
      *
-     * @param valDouble
+     * @param valorDoble
      *            Valor random double del stub. <br>
-     * @param valInt
+     * @param valorInt
      *            Valor random int del stub. <br>
      */
-    public MyRandomStub(final double valDouble, final int valInt) {
-        this.valDouble = valDouble;
-        this.valInt = valInt;
+    public MyRandomStub(final double valorDoble, final int valorInt) {
+        this.valDouble = valorDoble;
+        this.valInt = valorInt;
     }
 
     /**

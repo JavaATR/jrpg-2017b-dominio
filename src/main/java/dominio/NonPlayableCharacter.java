@@ -155,11 +155,11 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
     /**
      * Asigna un valor entero que representará la salud del NPC.
      *
-     * @param salud
+     * @param health
      *            Entero que indica la nueva salud del NPC.
      */
-    public final void setSalud(final int salud) {
-        this.salud = salud;
+    public final void setSalud(final int health) {
+        this.salud = health;
     }
 
     /**
@@ -168,8 +168,8 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
      * @param energia
      *            Entero que indica la nueva energia del NPC.
      */
-    public final void setEnergia(final int energia) {
-        this.energia = energia;
+    public final void setEnergia(final int energy) {
+        this.energia = energy;
     }
 
     /**

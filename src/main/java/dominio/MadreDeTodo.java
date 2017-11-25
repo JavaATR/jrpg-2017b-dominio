@@ -35,21 +35,21 @@ public abstract class MadreDeTodo {
     /**
      * Crea un personaje. <br>
      *
-     * @param fuerza
+     * @param strength
      *            Fuerza del personaje. <br>
-     * @param defensa
+     * @param defense
      *            Defensa del personaje. <br>
-     * @param nivel
+     * @param level
      *            Nivel del personaje. <br>
-     * @param nombre
+     * @param name
      *            Nombre del personaje. <br>
      */
-    public MadreDeTodo(final int fuerza, final int defensa, final int nivel,
-            final String nombre) {
-        this.fuerza = fuerza;
-        this.defensa = defensa;
-        this.nivel = nivel;
-        this.nombre = nombre;
+    public MadreDeTodo(final int strength, final int defense, final int level,
+            final String name) {
+        this.fuerza = strength;
+        this.defensa = defense;
+        this.nivel = level;
+        this.nombre = name;
         this.random = new MyRandom();
     }
 
@@ -92,11 +92,11 @@ public abstract class MadreDeTodo {
     /**
      * Establece el nombre del personaje. <br>
      *
-     * @param nombre
+     * @param name
      *            Nombre del personaje. <br>
      */
-    public final void setNombre(final String nombre) {
-        this.nombre = nombre;
+    public final void setNombre(final String name) {
+        this.nombre = name;
     }
 
     /**
@@ -128,11 +128,11 @@ public abstract class MadreDeTodo {
     /**
      * Establece el random del personaje. <br>
      *
-     * @param random
+     * @param rand
      *            Generador de números random. <br>
      */
-    public final void setRandom(final RandomGenerator random) {
-        this.random = random;
+    public final void setRandom(final RandomGenerator rand) {
+        this.random = rand;
     }
 
     /**
@@ -187,20 +187,20 @@ public abstract class MadreDeTodo {
     /**
      * Establece la defensa. <br>
      *
-     * @param defensa
+     * @param defense
      *            Puntos de defensa. <br>
      */
-    public void setDefensa(final int defensa) {
-        this.defensa = defensa;
+    public void setDefensa(final int defense) {
+        this.defensa = defense;
     }
 
     /**
      * Establece un item. <br>
      *
-     * @param items
+     * @param itemsList
      *            Items a establecer. <br>
      */
-    public void setItem(final ArrayList<Item> items) {
-        this.items = items;
+    public void setItem(final ArrayList<Item> itemsList) {
+        this.items = itemsList;
     }
 }

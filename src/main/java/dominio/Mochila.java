@@ -225,11 +225,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 1. <br>
      *
-     * @param item1
+     * @param itemNro1
      *            Id item 1. <br>
      */
-    public void setItem1(int item1) {
-        this.item1 = item1;
+    public void setItem1(int itemNro1) {
+        this.item1 = itemNro1;
     }
 
     /**
@@ -244,11 +244,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 2. <br>
      *
-     * @param item2
+     * @param itemNro2
      *            Id item2. <br>
      */
-    public void setItem2(int item2) {
-        this.item2 = item2;
+    public void setItem2(int itemNro2) {
+        this.item2 = itemNro2;
     }
 
     /**
@@ -263,11 +263,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 3. <br>
      *
-     * @param item3
+     * @param itemNro3
      *            Id item 3. <br>
      */
-    public void setItem3(int item3) {
-        this.item3 = item3;
+    public void setItem3(int itemNro3) {
+        this.item3 = itemNro3;
     }
 
     /**
@@ -282,11 +282,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 4. <br>
      *
-     * @param item4
+     * @param itemNro4
      *            Id item 4. <br>
      */
-    public void setItem4(int item4) {
-        this.item4 = item4;
+    public void setItem4(int itemNro4) {
+        this.item4 = itemNro4;
     }
 
     /**
@@ -301,11 +301,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 5. <br>
      *
-     * @param item5
+     * @param itemNro5
      *            Id item 5. <br>
      */
-    public void setItem5(int item5) {
-        this.item5 = item5;
+    public void setItem5(int itemNro5) {
+        this.item5 = itemNro5;
     }
 
     /**
@@ -320,11 +320,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 6. <br>
      *
-     * @param item6
+     * @param itemNro6
      *            Id item 6. <br>
      */
-    public void setItem6(int item6) {
-        this.item6 = item6;
+    public void setItem6(int itemNro6) {
+        this.item6 = itemNro6;
     }
 
     /**
@@ -339,11 +339,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 7. <br>
      *
-     * @param item7
+     * @param itemNro7
      *            Id item 7. <br>
      */
-    public void setItem7(int item7) {
-        this.item7 = item7;
+    public void setItem7(int itemNro7) {
+        this.item7 = itemNro7;
     }
 
     /**
@@ -358,11 +358,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 8. <br>
      *
-     * @param item8
+     * @param itemNro8
      *            Id item 8. <br>
      */
-    public void setItem8(int item8) {
-        this.item8 = item8;
+    public void setItem8(int itemNro8) {
+        this.item8 = itemNro8;
     }
 
     /**
@@ -377,11 +377,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 9. <br>
      *
-     * @param item9
+     * @param itemNro9
      *            Id item 9. <br>
      */
-    public void setItem9(int item9) {
-        this.item9 = item9;
+    public void setItem9(int itemNro9) {
+        this.item9 = itemNro9;
     }
 
     /**
@@ -396,11 +396,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 10. <br>
      *
-     * @param item10
+     * @param itemNro10
      *            Id item 10. <br>
      */
-    public void setItem10(int item10) {
-        this.item10 = item10;
+    public void setItem10(int itemNro10) {
+        this.item10 = itemNro10;
     }
 
     /**
@@ -415,11 +415,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 11. <br>
      *
-     * @param item11
+     * @param itemNro11
      *            Id item 11. <br>
      */
-    public void setItem11(int item11) {
-        this.item11 = item11;
+    public void setItem11(int itemNro11) {
+        this.item11 = itemNro11;
     }
 
     /**
@@ -434,11 +434,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 12. <br>
      *
-     * @param item12
+     * @param itemNro12
      *            Id item 12. <br>
      */
-    public void setItem12(int item12) {
-        this.item12 = item12;
+    public void setItem12(int itemNro12) {
+        this.item12 = itemNro12;
     }
 
     /**
@@ -453,11 +453,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 13. <br>
      *
-     * @param item13
+     * @param itemNro13
      *            Id item 13. <br>
      */
-    public void setItem13(int item13) {
-        this.item13 = item13;
+    public void setItem13(int itemNro13) {
+        this.item13 = itemNro13;
     }
 
     /**
@@ -472,11 +472,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 14. <br>
      *
-     * @param item14
+     * @param itemNro14
      *            Id item 14. <br>
      */
-    public void setItem14(int item14) {
-        this.item14 = item14;
+    public void setItem14(int itemNro14) {
+        this.item14 = itemNro14;
     }
 
     /**
@@ -491,11 +491,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 15. <br>
      *
-     * @param item15
+     * @param itemNro15
      *            Id item 15. <br>
      */
-    public void setItem15(int item15) {
-        this.item15 = item15;
+    public void setItem15(int itemNro15) {
+        this.item15 = itemNro15;
     }
 
     /**
@@ -510,11 +510,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 16. <br>
      *
-     * @param item16
+     * @param itemNro16
      *            Id item 16. <br>
      */
-    public void setItem16(int item16) {
-        this.item16 = item16;
+    public void setItem16(int itemNro16) {
+        this.item16 = itemNro16;
     }
 
     /**
@@ -529,11 +529,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 17. <br>
      *
-     * @param item17
+     * @param itemNro17
      *            Id item 17. <br>
      */
-    public void setItem17(int item17) {
-        this.item17 = item17;
+    public void setItem17(int itemNro17) {
+        this.item17 = itemNro17;
     }
 
     /**
@@ -548,11 +548,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 18. <br>
      *
-     * @param item18
+     * @param itemNro18
      *            Id item 18. <br>
      */
-    public void setItem18(int item18) {
-        this.item18 = item18;
+    public void setItem18(int itemNro18) {
+        this.item18 = itemNro18;
     }
 
     /**
@@ -567,11 +567,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 19. <br>
      *
-     * @param item19
+     * @param itemNro19
      *            Id item 19. <br>
      */
-    public void setItem19(int item19) {
-        this.item19 = item19;
+    public void setItem19(int itemNro19) {
+        this.item19 = itemNro19;
     }
 
     /**
@@ -586,11 +586,11 @@ public class Mochila implements Serializable {
     /**
      * Establece el id del item 20. <br>
      *
-     * @param item20
+     * @param itemNro20
      *            Id item 20. <br>
      */
-    public void setItem20(int item20) {
-        this.item20 = item20;
+    public void setItem20(int itemNro20) {
+        this.item20 = itemNro20;
     }
 
     /**
